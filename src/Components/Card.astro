@@ -1,0 +1,89 @@
+---
+const {title, copy} = Astro.props
+---
+
+<div class="card-container">
+    <div class="card-image">
+        <img src="/src/assets/galgo3.jpg" alt="">
+        
+    </div>
+    <div class="card-text">
+        <div class="info">
+        <h3 class="name">Nombre del producto</h3>
+        <p class="description">Descripción del producto en cuestión.</p>
+        </div>
+     
+       <p class="price">XXX €</p>
+    </div>  
+</div>
+
+<style>
+.card-container {
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    overflow: hidden;
+    border-radius: var(--img-corners);
+    transition: all .2s ease;
+    box-shadow: var(--shadow);
+&:hover {
+    transform: scale(.98);
+}
+   
+
+}
+
+
+
+
+
+.card-text {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 2rem 1.4rem 1.4rem;
+    
+.name {
+    color: var(--dark);
+    margin: 0;
+    font: var(--h4);
+}
+
+.description {
+    font: var(--body-copy);
+    color: var(--dark-muted-text);
+    
+} 
+.price {
+    font: var(--h3);
+    color: var(--accent);
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+}
+
+
+.card-image {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+
+     img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+   
+    margin-bottom: 1rem;
+}
+}
+
+
+
+
+</style>

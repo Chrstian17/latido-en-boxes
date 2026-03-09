@@ -1,0 +1,512 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+/* Basic Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+:root {
+
+  /* Colors */
+  --accent: #CC2530;
+  --dark: rgb(15, 15, 15);
+  --dark-muted-text: rgba(15, 15, 15, 0.7);
+  --light: rgb(255, 255, 255);
+  --light-muted-text: rgba(255, 255, 255, 0.5);
+  --gray-section: #EDEDED;
+  --shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.09);
+  
+  /* Text */
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Fraunces', sans-serif;
+  --h1: bold clamp(6rem, 5.091rem + 2.424vw, 8rem) var(--secondary-font);
+  --h2: bold 4rem/1.1em var(--secondary-font);
+  --h3: 700 3rem/1em var(--primary-font);
+  --h3: 700 2rem/1.2em var(--primary-font);
+   --h4: 700 1.5rem/1.2em var(--primary-font);
+  --body-copy: 400 1rem/1.5em var(--primary-font);
+  --body-copy-l: 500 1.1rem/1.6em var(--primary-font);
+  --button: 700 1.2rem/1.4em var(--primary-font);
+
+  /* Space and sizes */
+  --img-corners: 40px;
+  --card-corners: 40px;
+  --space-lg: clamp(4rem, 6vw, 10rem);
+  --space-md: clamp(4rem, 5vw, 6rem);
+  --content-width:  clamp(750px, 85%, 1320px);
+  --padding-block: clamp(4rem,8vw,6rem);
+  --padding-inline: clamp(1rem,6vw,2rem);
+  --pill-shape: 400px;
+   
+}
+
+
+
+
+/* GENERAL STYLES */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--primary-font);
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.4em;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font: var(--h1);
+  margin: 0;
+}
+
+h2 {
+  font: var(--h2);
+}
+
+h3 {
+  font: var(--h3);
+}
+
+p {
+font: var(--body-copy-l);
+}
+
+
+/* UTILITIES */
+
+.accent-text {
+  color: var(--accent);
+}
+
+.light-text {
+  color: var(--white);
+}
+
+.dark-text {
+  color: var(--black);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1.4rem;
+  
+  padding: 1rem;
+  border-radius: var(--card-corners);
+
+  h2 {
+    
+    color: var(--accent);
+  }
+
+  p {
+    
+    margin-bottom: 2rem;
+    color: var(--dark-muted-text);
+    text-align: justify;
+  }
+
+
+}
+
+
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1.4rem;
+  
+  padding: 0;
+  
+  
+
+  
+
+}
+
+
+.section {
+
+  padding: var(--padding-block) var(--padding-inline);
+  
+  .content-wrapper {
+   max-width: var(--content-width);
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+  margin: auto;
+  gap: 5rem;
+  
+}
+  
+}
+
+
+@media (max-width: 768px) {
+    .section {
+      padding-inline: 0;
+    }
+    .content-wrapper {
+      grid-template-columns: 1fr; 
+        max-width: 100%;
+      
+    }
+    .col {
+      padding-inline: 10vw;
+        
+    }
+    
+  
+  }
+
+
+
+
+
+
+
+.asimetric-section {
+
+  padding: var(--padding-block) 0;
+  
+  .content-wrapper {
+   max-width:100%;
+   display: grid;
+ align-items: center;
+  margin: auto;
+  gap: 9rem;
+  padding: 0;
+  
+  
+}
+
+}
+
+
+.nosotros-section, .tienda-section {
+
+ 
+  padding-left: calc((100% - var(--content-width)) / 2);
+  .content-wrapper {
+  
+  grid-template-columns: 1fr 2fr;
+ 
+  
+  
+}
+
+}
+
+.tienda-section {
+
+  background-color: var(--accent);
+ 
+  
+
+}
+
+
+
+@media (max-width: 768px) {
+  .asimetric-section {
+
+     padding-inline: 0;
+
+      .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+  }
+  
+}
+
+
+
+.heading {
+  
+ padding-bottom: var(--padding-block);
+  align-items: center;
+  text-align: center;
+}
+   
+  
+
+
+
+.button {
+  
+  
+  
+  border-radius:var(--pill-shape);
+  padding: 1em 2em;
+  font: var(--button);
+  flex-direction: row;
+  display: inline-flex;
+  width: fit-content;
+  margin: 0;
+  transition: all .2s ease;
+  gap: .5em;
+  align-items: center;
+  box-shadow: var(--shadow);
+    
+  &:hover {
+    
+    opacity: .9;
+    transform: translateY(-3px);
+    
+    }
+
+    i {
+
+   
+      font-size: 2rem;
+       transition: all .2s ease;
+    }
+    
+    
+  }
+
+
+@media (max-width: 767px) {
+  .swiper-arrow {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+  .button:hover i {
+    
+    
+    transform: scale(1.2);
+  }
+
+  .button-accent {
+  color: var(--light);
+  
+  background-color: var(--accent);
+ 
+  }
+
+   .button-light {
+  color: var(--accent);
+  
+  background-color: var(--light);
+ 
+  }
+  
+
+
+
+
+
+
+/* UNIDOS POR LOS LATIDOS */
+
+.unidos-section .heading {
+  
+ padding-bottom: var(--padding-block);
+  align-items: center;
+   
+  
+
+h2, p {
+color: var(--accent);
+text-align: center;
+}
+p {
+  max-width: 70ch;
+}
+}
+
+.unidos-section img {
+  border-radius: var(--img-corners);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  
+}
+
+.unidos-section .content-wrapper  {
+  
+  
+  align-items: stretch;
+}
+
+/* NOSOTROS */
+
+
+
+
+
+/* HERO */
+
+.hero-section {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/src/assets/Hero\ image.jpg);
+  height: 100vh;
+  align-content: center;
+  
+  h1 {
+    line-height: 1em;
+    color: var(--light);
+  }
+  .col {
+    gap: .1rem;
+  }
+  p{
+    color: var(--light);
+    max-width: 40ch;
+
+  }
+ 
+}
+
+
+
+/* EL PROBLEMA */
+
+
+.problema-section {
+
+  background: var(--gray-section);
+
+   h2, img {
+margin-bottom: 3rem;
+  
+}
+
+img {
+  width: 300px;
+}
+
+.col {
+  justify-content: end;
+}
+
+p {
+  max-width: 45ch;
+}
+
+}
+
+/* TIENDA */
+
+.tienda-section {
+  
+  
+  h2, h3
+ {
+    color: var(--light);
+  }
+  p {
+    color: var(--light-muted-text);
+  }
+  .content-wrapper {
+    align-items: center;
+  }
+}
+
+/* AYUDA */
+
+.ayuda-section {
+
+  padding: var(--padding-block) var(--padding-inline);
+
+  
+  .content-wrapper {
+   max-width: var(--content-width);
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  margin: auto;
+  gap: 5rem;
+  
+}}
+
+/* CARRUSEL IMÁGENES */
+
+.full-section {
+ 
+padding: var(--padding-block) 0;
+
+  .content-wrapper {
+
+ max-width: 100%;
+}}
+
+
+
+/* FORMULARIO */
+
+.form-section {
+  background: #ffffff;
+
+form {
+  display: grid;
+  gap: 1.5em;
+}
+
+.form-group {
+  display: grid;
+  gap: .5em;
+}
+
+input {
+  background-color: rgb(240, 240, 240);
+  border: none;
+  border-radius: 24px;
+  color: rgb(95, 95, 95);
+  padding: 1.5em 1.5em;
+  width: 100%;
+  font: inherit;
+  border: 2px solid var(--gray-section);
+  transition: border-color .3s ease;
+  
+
+
+
+
+}
+
+label {
+  font: var(--body-copy);
+}
+
+textarea {
+  background-color: rgb(240, 240, 240);
+  border: none;
+  border-radius: 24px;
+  color: rgb(95, 95, 95);
+  padding: 2em 2em;
+  min-height: 20vh;
+}
+
+.col {
+  gap: 4rem;
+  justify-content: center;
+}
+
+img {
+  width: 700px;
+}
+.content-wrapper {
+  gap: 6rem;
+}
+  
+}
+
+
+
+input:focus{
+  outline: none;
+border: 2px solid rgb(194, 194, 194);
+} 

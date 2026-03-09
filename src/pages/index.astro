@@ -1,0 +1,306 @@
+---
+import "../styles/styles.css";
+import Card from "../Components/Card.astro";
+import Header from "../Components/Header.astro";
+import Boton from "../Components/Boton.astro";
+import Botonblanco from "../Components/Boton blanco.astro";
+import Footer from "../Components/Footer.astro";
+import Iconotexto from "../Components/Icono-texto.astro";
+import Carruselinicial from "../Components/Carrusel inicial.astro";
+import Carruselfull from "../Components/Carrusel full.astro";
+
+import Carruseltienda from "../Components/Carrusel tienda.astro";
+import IconoTexto from "../Components/Icono-texto.astro";
+
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latido en Boxes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,100..900,50&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/Styles/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
+       <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+  </head>
+  <body>
+    <!-- HERO -->
+    <div class="section hero-section">
+      <div class="overlay">
+        <div class="content-wrapper">
+          <div class="col">
+           
+            <h1>Latido<br />en Boxes</h1>
+            <p>
+              Una asociación solidaria de apoyo al galgo que une el mundo del
+              motor con la protección animal.
+            </p>
+            <a href="#" class="button button-accent"> <i class="ph-fill ph-heart"></i>Contactar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOSOTROS -->
+
+    <div class=" asimetric-section nosotros-section">
+      <div class="content-wrapper">
+        <div class="col">
+          <div class="col-1">
+            <h2>Nuestra<br /> misión</h2>
+            <p>
+              Es <strong>impulsar, financiar y dar visibilidad</strong> al trabajo
+              de las protectoras de galgos en toda España
+            </p>
+          </div>
+          <div class="col-1">
+            <h2>Nuestra<br /> filosofía</h2>
+            <p>
+              Transparencia, cercanía y unión con el mundo de la automoción para <strong
+                >crear comunidad y dar visibilidad.</strong
+              >
+            </p>
+          </div>
+        </div>
+        <Carruselinicial></Carruselinicial>
+      </div>
+    </div>
+
+    <!-- EL PROBLEMA -->
+
+    <div class="section problema-section">
+      <div class="content-wrapper">
+        <div class="col">
+          <h2>Una realidad<br /> que no podemos ignorar</h2>
+          <h3>El problema</h3>
+          <p>
+            Cuando los galgos no cumplen con las expectativas cinegéticas,
+            muchos son abandonados, maltratados o incluso asesinados.
+          </p>
+        </div>
+        <div class="col">
+          <img src="/src/assets/galgo.svg" alt="" />
+          <h3>Cifras que duelen</h3>
+          <p>
+            En 2022, fueron abandonados 12.295 perros de caza, de los cuales
+            5.544 eran galgos.
+
+            <br /><br />Se estima que cada año se desechan entre 50.000 y 80.000
+            galgos, considerando también los que son sacrificados fuera de
+            estadísticas oficiales.
+
+            <br /><br />La temporada de caza provoca un auge del abandono: en
+            2023, un 11 % de los 170.712 perros abandonados se registró justo al
+            terminar esa época.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- UNIDOS POR LOS LATIDOS -->
+
+    <div class="section unidos-section">
+      <div class="heading col">
+        <h2>Unidos por los latidos</h2>
+        <p>
+          Nuestra asociación actúa como una plataforma de apoyo y conexión entre
+          las protectoras de galgos y los donantes, estructurada en cuatro
+          líneas de acción.
+        </p>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="col">
+          <p>
+            En primer lugar, organizamos eventos solidarios vinculados al mundo
+            del motor, como rutas benéficas, concentraciones con clubs y pilotos
+            y encuentros con talleres o concesionarios, destinando íntegramente
+            las inscripciones y aportaciones a las protectoras colaboradoras. E
+
+            <br /><br /> En segundo lugar, desarrollamos campañas de concienciación
+            y visibilidad mediante colaboraciones con influencers, figuras del motor
+            y medios, generando contenido que difunde la realidad del galgo y su abandono,
+            además de impartir charlas en colegios, talleres y eventos.
+
+            <br /><br />En tercer lugar, producimos merchandising solidario como
+            camisetas, pegatinas y accesorios personalizados, cuyos beneficios
+            permiten financiar necesidades urgentes de las asociaciones.
+
+            <br /><br />Finalmente, articulamos una red de apoyo que canaliza
+            donaciones económicas y materiales, así como servicios como
+            medicación, pienso, voluntariado, casas de acogida y soporte
+            especializado en comunicación, diseño y promoción. Todo ello se
+            desarrolla con la intención de crear, a medio o largo plazo, un
+            refugio propio que amplíe nuestra capacidad de rescate y cuidado de
+            galgos.
+          </p>
+        </div>
+        <div class="col ">
+          <img src="/src/assets/galgo3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- TIENDA SOLIDARIA -->
+
+    <div class="asimetric-section tienda-section">
+      <div class="content-wrapper">
+
+        <div class="col">
+          <h2>Tienda <br />solidaria</h2>
+          <p>
+            Los beneficios se destinan a apoyar a protectoras de galgos en
+            España, financiando rescates, tratamientos y cuidados urgentes.
+            <br><br>Comprar en nuestra tienda es transformar un gesto cotidiano en una
+            segunda oportunidad.
+          </p>
+          <a href="#" class="button button-light"><i class="ph-bold ph-download-simple"></i>Descargar</a>
+        </div>
+        <Carruseltienda></Carruseltienda>
+        
+       
+
+       
+      </div>
+    </div>
+
+    <!-- CARRUSEL IMÁGENES -->
+
+    <div class="section full-section">
+      <div class="content-wrapper">
+        <Carruselfull></Carruselfull>
+      </div>
+    </div>
+
+    <!-- CÓMO AYUDAR -->
+    <div class="section ayuda-section">
+      <div class="heading col">
+        <h2>¿Cómo puedo ayudar?</h2>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="col">
+          <IconoTexto
+            titulo="Económico"
+            explicacion="Donaciones o aportaciones periódicas."
+            icono="/src/assets/economico.svg"
+          />
+        </div>
+        <div class="col">
+          <IconoTexto
+            titulo="Material"
+            explicacion="Pienso, medicación, productos de limpieza, accesorios."
+            icono="/src/assets/material.svg"
+          />
+        </div>
+        <div class="col">
+          <IconoTexto
+            titulo="Voluntariado"
+            explicacion="Tiempo, transporte, casas de acogida."
+            icono="/src/assets/voluntariado.svg"
+          />
+        </div>
+        <div class="col">
+          <IconoTexto
+            titulo="Visibilidad"
+            explicacion="Ayudar a difundir la causa en redes, prensa y eventos."
+            icono="/src/assets/visibilidad.svg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="section form-section">
+      <div class="content-wrapper">
+        <div class="col">
+          <h2>¡Quiero más información!</h2>
+          <form action="">
+            <div class="form-group">
+              <label for="name">Nombre y apellidos</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="comment">Comentarios</label>
+              <textarea name="comment" id="comment"></textarea>
+            </div>
+            <a href="#" class="button button-accent">Enviar</a>
+          </form>
+        </div>
+        <div class="col">
+          <img src="/src/assets/galgo-form.webp" alt="" style="display: none;"/>
+        </div>
+      </div>
+    </div>
+
+   
+   
+   
+      <div class=" prueba-section">
+      <div class="content-wrapper">
+        <div class="col">
+          <div class="">
+            <h2>Nuestra<br /> misión</h2>
+            <p>
+              Es <strong>impulsar, financiar y dar visibilidad</strong> al trabajo
+              de las protectoras de galgos en toda España
+            </p>
+          </div>
+          
+       
+        </div>
+         <div class="col">
+          <div class="">
+            <h2>Nuestra<br /> misión</h2>
+            <p>
+              Es <strong>impulsar, financiar y dar visibilidad</strong> al trabajo
+              de las protectoras de galgos en toda España
+            </p>
+          </div>
+          
+       
+        </div>
+       
+      </div>
+    </div>
+   
+   
+   
+   
+   
+   
+   
+
+    <script src="/src/scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+    ></script>
+  </body>
+</html>
+

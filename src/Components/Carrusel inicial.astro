@@ -1,0 +1,94 @@
+
+
+
+          <div class="swiper swiper-inicial ">
+  <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+    <!-- Slides -->
+    
+
+      <div class="swiper-slide" ><img src="/src/assets/galgo1.jpg" alt=""></div>
+      <div class="swiper-slide" ><img src="/src/assets/galgo3.jpg" alt=""></div>
+      <div class="swiper-slide" ><img src="/src/assets/galgo2.jpg" alt=""></div>
+      <div class="swiper-slide" ><img src="/src/assets/galgo3.jpg" alt=""></div>
+      <div class="swiper-slide" ><img src="/src/assets/galgo3.jpg" alt=""></div>
+      <div class="swiper-slide" ><img src="/src/assets/galgo3.jpg" alt=""></div>
+      <div class="swiper-slide" ><img src="/src/assets/galgo3.jpg" alt=""></div>
+     
+   
+  </div>
+  <div class="swiper-nav">
+    <button class="swiper-arrow button button-accent is-prev"><i class="ph-bold ph-caret-left"></i></button>
+      <button class="swiper-arrow button button-accent is-next"><i class="ph-bold ph-caret-right"></i></button>
+   
+
+  </div>
+
+
+
+</div>
+
+
+
+<style>
+
+.swiper-inicial .swiper-arrow {
+
+  padding: 1em;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  
+ 
+}
+
+
+
+.swiper-inicial .swiper-nav {
+  
+
+display: flex;
+flex-direction: row;
+gap: .5rem;
+justify-content: start;
+padding-bottom: 1rem;
+i {
+
+ 
+ font-size: 34px;
+ 
+}
+
+}
+
+
+.swiper {
+ width: 100%;
+
+display: flex;
+flex-direction: column;
+gap: 1rem;
+  
+}
+
+.swiper-inicial .swiper-slide {
+  align-content: center;
+  width: 100%;
+  transition: all .2s ease;
+  
+  &:hover {
+    transform: scale(.98);
+}
+}
+.swiper img {
+  width:100%;
+  border-radius: var(--img-corners);
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+
+
+
+</style>

@@ -1,0 +1,25 @@
+---
+const {accion} = Astro.props
+const {enlace} = Astro.props
+---
+
+<a href={enlace} class="boton">{accion}</a>
+
+
+<style>
+
+    .boton {
+    background-color: var(--blanco);
+    border-radius: 600px;
+    border: none;
+    color: var(--acento);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: .8em 1.2em;
+    font-weight: 600;
+    width: fit-content;
+    
+}
+
+</style>

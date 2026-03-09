@@ -1,0 +1,85 @@
+---
+import Card from '../Components/Card.astro'
+---
+
+          <div class="swiper swiper-tienda ">
+  <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+    <!-- Slides -->
+    
+
+      <div class="swiper-slide" ><Card></Card></div>
+      <div class="swiper-slide" ><Card></Card></div>
+      <div class="swiper-slide" ><Card></Card></div>
+      <div class="swiper-slide" ><Card></Card></div>
+      <div class="swiper-slide" ><Card></Card></div>
+      <div class="swiper-slide" ><Card></Card></div>
+   
+  </div>
+  <div class="swiper-nav">
+    <button class="swiper-arrow button button-light is-prev"><i class="ph-bold ph-caret-left"></i></button>
+      <button class="swiper-arrow button button-light is-next"><i class="ph-bold ph-caret-right"></i></button>
+   
+
+  </div>
+
+
+
+</div>
+
+
+
+<style>
+
+.swiper-tienda .swiper-arrow {
+
+  padding: 1em;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  
+ 
+}
+
+
+
+
+.swiper-tienda .swiper-nav {
+  
+
+display: flex;
+flex-direction: row;
+gap: .5rem;
+justify-content: start;
+padding-bottom: 1rem;
+i {
+
+ 
+ font-size: 34px;
+ 
+}
+
+}
+
+
+.swiper {
+ width: 100%;
+
+display: flex;
+flex-direction: column;
+gap: 1rem;
+  
+}
+
+.swiper-tienda .swiper-slide {
+  align-content: center;
+  width: 100%;
+}
+.swiper img {
+  width:100%;
+}
+
+
+
+
+</style>
