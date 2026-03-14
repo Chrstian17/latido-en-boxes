@@ -1,84 +1,108 @@
 ---
-import Card from '../Components/Card.astro'
+import Card from "../Components/Card.astro";
 ---
 
-          <div class="swiper swiper-tienda ">
+<div class="swiper swiper-tienda">
   <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
+  <div class="swiper-wrapper">
     <!-- Slides -->
-    
 
-      <div class="swiper-slide" ><Card></Card></div>
-      <div class="swiper-slide" ><Card></Card></div>
-      <div class="swiper-slide" ><Card></Card></div>
-      <div class="swiper-slide" ><Card></Card></div>
-      <div class="swiper-slide" ><Card></Card></div>
-      <div class="swiper-slide" ><Card></Card></div>
-   
+    <div class="swiper-slide">
+      <Card
+        title="Collar Martingale"
+        description="Disponemos de tres tallas para que puedas seleccionar el collar que mejor se adapte a las características únicas de tu mascota. Encuentra el collar ideal y asegúrate de que tu perro luzca y se sienta genial."
+        price="16'99 €"
+        img="/assets/collar-1.jpg"
+      />
+    </div>
+      <div class="swiper-slide">
+      <Card
+        title="Collar de piel"
+        description="Collar para perro, Galgos, fabricado artesanalmente en piel auténtica, con detalle de Galgos bordado."
+        price="24'90 €"
+        img="/assets/collar-3.jpg"
+      />
+    </div>
+     <div class="swiper-slide">
+      <Card
+        title="Crema para almohadillas"
+        description="Nuestro protector patas perro nutre intensamente las almohadillas secas, agrietadas o irritadas. "
+        price="10'99 €"
+        img="/assets/crema.jpg"
+      />
+    </div>
+      <div class="swiper-slide">
+      <Card
+        title="Collar para Galgos Aalborg"
+        description="El discreto collar de piel de vacuno de alta calidad es ideal debido a su forma especial para todos los galgos y sus mestizos con su físico especial."
+        price="21'10 €"
+        img="/assets/collar-4.jpg"
+      />
+    </div>
+      <div class="swiper-slide">
+      <Card
+        title="Arnés antiescape"
+        description="Arnés para perros diseñado para el máximo confort, de nailon resistente y robusto, forma ergonómica con suave acolchado, muy cómodo para el animal"
+        price="46'10 €"
+        img="/assets/arnes.jpg"
+      />
+    </div>
+ 
+          <div class="swiper-slide">
+      <Card
+        title="Ultra Squeaker Ball"
+        description="¡Chuckit! Crea juguetes interactivos y atractivos para perros que forjan vínculos duraderos entre las personas y sus mascotas."
+        price="5'49 €"
+        img="/assets/pelota.jpg"
+      />
+    </div>
+ 
   </div>
   <div class="swiper-nav">
-    <button class="swiper-arrow button button-light is-prev"><i class="ph-bold ph-caret-left"></i></button>
-      <button class="swiper-arrow button button-light is-next"><i class="ph-bold ph-caret-right"></i></button>
-   
-
+    <button class="swiper-arrow button button-light is-prev"
+      ><i class="ph-bold ph-caret-left"></i></button
+    >
+    <button class="swiper-arrow button button-light is-next"
+      ><i class="ph-bold ph-caret-right"></i></button
+    >
   </div>
-
-
-
 </div>
 
-
-
 <style>
+  .swiper-tienda .swiper-arrow {
+    padding: 1em;
+    border: none;
+    display: flex;
+    cursor: pointer;
+  }
 
-.swiper-tienda .swiper-arrow {
+  .swiper-tienda .swiper-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: start;
+    padding-bottom: 1rem;
+    i {
+      font-size: 34px;
+    }
+  }
 
-  padding: 1em;
-  border: none;
-  display: flex;
-  cursor: pointer;
-  
- 
-}
+  .swiper {
+    width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-
-
-.swiper-tienda .swiper-nav {
-  
-
-display: flex;
-flex-direction: row;
-gap: .5rem;
-justify-content: start;
-padding-bottom: 1rem;
-i {
-
- 
- font-size: 34px;
- 
-}
-
-}
-
-
-.swiper {
- width: 100%;
-
-display: flex;
-flex-direction: column;
-gap: 1rem;
-  
-}
-
-.swiper-tienda .swiper-slide {
-  align-content: center;
-  width: 100%;
-}
-.swiper img {
-  width:100%;
-}
-
+  .swiper-tienda .swiper-slide {
+    align-content: center;
+    width: 100%;
+    height: auto;
+  }
+  .swiper img {
+    width: 100%;
+  }
 
 
 

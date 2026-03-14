@@ -1,7 +1,10 @@
 const swiperTienda = new Swiper('.swiper.swiper-tienda', {
   direction: 'horizontal',
   loop: true,
-
+slidesPerView: 1.2, 
+centeredSlides: true,
+spaceBetween: 12,
+autoHeight: false,
 
   // Todo lo que sea responsive va AQUÍ dentro
   breakpoints: {
@@ -13,6 +16,7 @@ const swiperTienda = new Swiper('.swiper.swiper-tienda', {
     640: {
       slidesPerView: 2.4,
       spaceBetween: 12,
+      centeredSlides: false,
       
     }
   },

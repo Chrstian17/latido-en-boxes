@@ -1,19 +1,19 @@
 ---
-const {title, copy} = Astro.props
+const {title, description, price, img} = Astro.props
 ---
 
 <div class="card-container">
     <div class="card-image">
-        <img src="/assets/galgo3.jpg" alt="">
+        <img src={img} alt="">
         
     </div>
     <div class="card-text">
         <div class="info">
-        <h3 class="name">Nombre del producto</h3>
-        <p class="description">Descripción del producto en cuestión.</p>
+        <h3 class="name">{title}</h3>
+        <p class="description">{description}</p>
         </div>
      
-       <p class="price">XXX €</p>
+       <p class="price">{price}</p>
     </div>  
 </div>
 
@@ -27,6 +27,7 @@ const {title, copy} = Astro.props
     border-radius: var(--img-corners);
     transition: all .2s ease;
     box-shadow: var(--shadow);
+    height: 100%;
 &:hover {
     transform: scale(.98);
 }
@@ -44,11 +45,13 @@ const {title, copy} = Astro.props
     flex-direction: column;
     gap: 3rem;
     padding: 0 2rem 1.4rem 1.4rem;
+   flex-grow: 1;
+    
     
 .name {
     color: var(--dark);
     margin: 0;
-    font: var(--h4);
+    font: var(--h3);
 }
 
 .description {
@@ -59,11 +62,14 @@ const {title, copy} = Astro.props
 .price {
     font: var(--h3);
     color: var(--accent);
+   
 }
 .info {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    flex-grow: 1;
+
 }
 
 }

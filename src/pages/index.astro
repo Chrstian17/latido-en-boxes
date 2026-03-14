@@ -10,9 +10,7 @@ import Carruselinicial from "../Components/Carrusel inicial.astro";
 import Carruselfull from "../Components/Carrusel full.astro";
 import Carruseltienda from "../Components/Carrusel tienda.astro";
 import IconoTexto from "../Components/Icono-texto.astro";
-
 ---
-
 
 <!doctype html>
 <html lang="es">
@@ -27,16 +25,21 @@ import IconoTexto from "../Components/Icono-texto.astro";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,100..900,50&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap"
       rel="stylesheet"
     />
-    
+
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
     />
-       <link
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
@@ -48,13 +51,14 @@ import IconoTexto from "../Components/Icono-texto.astro";
       <div class="overlay">
         <div class="content-wrapper">
           <div class="col">
-           
-            <h1>Latido<br />en Boxes</h1>
+            <h1 class="fraunces-h1">Latido<br />en Boxes</h1>
             <p>
               Una asociación solidaria de apoyo al galgo que une el mundo del
               motor con la protección animal.
             </p>
-            <a href="#como-ayudar" class="button button-accent"> <i class="ph-fill ph-heart"></i>Quiero ayudar</a>
+            <a href="#como-ayudar" class="button button-accent">
+              <i class="ph-fill ph-heart"></i>Quiero ayudar</a
+            >
           </div>
         </div>
       </div>
@@ -62,18 +66,18 @@ import IconoTexto from "../Components/Icono-texto.astro";
 
     <!-- NOSOTROS -->
 
-    <div class=" asimetric-section nosotros-section">
+    <div class="asimetric-section nosotros-section">
       <div class="content-wrapper">
         <div class="col">
           <div class="col-1">
-            <h2>Nuestra<br /> misión</h2>
+            <h2 class="fraunces-title">Nuestra<br /> misión</h2>
             <p>
               Es <strong>impulsar, financiar y dar visibilidad</strong> al trabajo
               de las protectoras de galgos en toda España
             </p>
           </div>
           <div class="col-1">
-            <h2>Nuestra<br /> filosofía</h2>
+            <h2 class="fraunces-title">Nuestra<br /> filosofía</h2>
             <p>
               Transparencia, cercanía y unión con el mundo de la automoción para <strong
                 >crear comunidad y dar visibilidad.</strong
@@ -81,7 +85,7 @@ import IconoTexto from "../Components/Icono-texto.astro";
             </p>
           </div>
         </div>
-        <Carruselinicial></Carruselinicial>
+        <Carruselinicial />
       </div>
     </div>
 
@@ -90,7 +94,9 @@ import IconoTexto from "../Components/Icono-texto.astro";
     <div class="section problema-section">
       <div class="content-wrapper">
         <div class="col">
-          <h2>Una realidad<br /> que no podemos ignorar</h2>
+          <h2 class="fraunces-title">
+            Una realidad<br /> que no podemos ignorar
+          </h2>
           <h3>El problema</h3>
           <p>
             Cuando los galgos no cumplen con las expectativas cinegéticas,
@@ -101,11 +107,11 @@ import IconoTexto from "../Components/Icono-texto.astro";
           <img src="/assets/galgo.svg" alt="" />
           <h3>Cifras que duelen</h3>
           <p>
-            En 2022, fueron abandonados 12.295 perros de caza, de los cuales
-            5.544 eran galgos.
+            En 2022, fueron abandonados <strong>12.295 perros de caza</strong>, de los cuales
+            <strong>5.544 eran galgos.</strong>
 
-            <br /><br />Se estima que cada año se desechan entre 50.000 y 80.000
-            galgos, considerando también los que son sacrificados fuera de
+            <br /><br />Se estima que cada año se <strong>desechan entre 50.000 y 80.000
+            galgos,</strong> considerando también los que son sacrificados fuera de
             estadísticas oficiales.
 
             <br /><br />La temporada de caza provoca un auge del abandono: en
@@ -120,7 +126,7 @@ import IconoTexto from "../Components/Icono-texto.astro";
 
     <div class="section unidos-section">
       <div class="heading col">
-        <h2>Unidos por los latidos</h2>
+        <h2 class="fraunces-title">Unidos por los latidos</h2>
         <p>
           Nuestra asociación actúa como una plataforma de apoyo y conexión entre
           las protectoras de galgos y los donantes, estructurada en cuatro
@@ -131,30 +137,32 @@ import IconoTexto from "../Components/Icono-texto.astro";
       <div class="content-wrapper">
         <div class="col">
           <p>
-            En primer lugar, organizamos eventos solidarios vinculados al mundo
-            del motor, como rutas benéficas, concentraciones con clubs y pilotos
-            y encuentros con talleres o concesionarios, destinando íntegramente
-            las inscripciones y aportaciones a las protectoras colaboradoras. E
+            En primer lugar, organizamos <strong
+              >eventos solidarios vinculados al mundo del motor</strong
+            >, como rutas benéficas, concentraciones con clubs y pilotos y
+            encuentros con talleres o concesionarios, destinando íntegramente
+            las inscripciones y aportaciones a las protectoras colaboradoras.
 
-            <br /><br /> En segundo lugar, desarrollamos campañas de concienciación
-            y visibilidad mediante colaboraciones con influencers, figuras del motor
-            y medios, generando contenido que difunde la realidad del galgo y su abandono,
-            además de impartir charlas en colegios, talleres y eventos.
+            <br /><br /> n segundo lugar, desarrollamos <strong
+              >campañas de concienciación y visibilidad</strong
+            > mediante colaboraciones con influencers, figuras del motor y medios,
+            generando contenido que difunde la realidad del galgo y su abandono, además
+            de impartir charlas en colegios, talleres y eventos.
 
-            <br /><br />En tercer lugar, producimos merchandising solidario como
-            camisetas, pegatinas y accesorios personalizados, cuyos beneficios
+            <br /><br />En tercer lugar, producimos <strong
+              >merchandising solidario</strong
+            > como camisetas, pegatinas y accesorios personalizados, cuyos beneficios
             permiten financiar necesidades urgentes de las asociaciones.
 
-            <br /><br />Finalmente, articulamos una red de apoyo que canaliza
-            donaciones económicas y materiales, así como servicios como
-            medicación, pienso, voluntariado, casas de acogida y soporte
-            especializado en comunicación, diseño y promoción. Todo ello se
-            desarrolla con la intención de crear, a medio o largo plazo, un
-            refugio propio que amplíe nuestra capacidad de rescate y cuidado de
-            galgos.
+            <br /><br />Finalmente, articulamos una <strong>red de apoyo</strong
+            > que canaliza donaciones económicas y materiales, así como servicios
+            como medicación, pienso, voluntariado, casas de acogida y soporte especializado
+            en comunicación, diseño y promoción. Todo ello se desarrolla con la intención
+            de crear, a medio o largo plazo, un refugio propio que amplíe nuestra
+            capacidad de rescate y cuidado de galgos.
           </p>
         </div>
-        <div class="col ">
+        <div class="col">
           <img src="/assets/galgo-taller.webp" alt="" />
         </div>
       </div>
@@ -164,22 +172,19 @@ import IconoTexto from "../Components/Icono-texto.astro";
 
     <div class="asimetric-section tienda-section">
       <div class="content-wrapper">
-
         <div class="col">
-          <h2>Tienda <br />solidaria</h2>
+          <h2 class="fraunces-title">Tienda <br />solidaria</h2>
           <p>
             Los beneficios se destinan a apoyar a protectoras de galgos en
             España, financiando rescates, tratamientos y cuidados urgentes.
-            <br><br>Comprar en nuestra tienda es transformar un gesto cotidiano en una
-            segunda oportunidad.
+            <br /><br />Comprar en nuestra tienda es transformar un gesto
+            cotidiano en una segunda oportunidad.
           </p>
-          <a href="#" class="button button-light"><i class="ph-bold ph-download-simple"></i>Descargar</a>
+          <a href="#" class="button button-light"
+            ><i class="ph-bold ph-download-simple"></i>Descargar</a
+          >
         </div>
-        <Carruseltienda></Carruseltienda>
-        
-       
-
-       
+        <Carruseltienda />
       </div>
     </div>
 
@@ -187,43 +192,43 @@ import IconoTexto from "../Components/Icono-texto.astro";
 
     <div class="section full-section">
       <div class="content-wrapper">
-        <Carruselfull></Carruselfull>
+        <Carruselfull />
       </div>
     </div>
 
     <!-- CÓMO AYUDAR -->
     <div class="section ayuda-section" id="como-ayudar">
       <div class="heading col">
-        <h2>¿Cómo puedo ayudar?</h2>
+        <h2 class="fraunces-title">¿Cómo puedo ayudar?</h2>
       </div>
 
       <div class="content-wrapper">
         <div class="col">
           <IconoTexto
-            titulo="Económico"
-            explicacion="Donaciones o aportaciones periódicas."
-            icono="/assets/economico.svg"
+            title="Económico"
+            description="Donaciones o aportaciones periódicas."
+            icon="ph ph-credit-card"
           />
         </div>
         <div class="col">
           <IconoTexto
-            titulo="Material"
-            explicacion="Pienso, medicación, productos de limpieza, accesorios."
-            icono="/assets/material.svg"
+            title="Material"
+            description="Pienso, medicación, productos de limpieza, accesorios."
+            icon="ph ph-bone"
           />
         </div>
         <div class="col">
           <IconoTexto
-            titulo="Voluntariado"
-            explicacion="Tiempo, transporte, casas de acogida."
-            icono="/assets/voluntariado.svg"
+            title="Voluntariado"
+            description="Tiempo, transporte, casas de acogida."
+            icon="ph ph-hand-heart"
           />
         </div>
         <div class="col">
           <IconoTexto
-            titulo="Visibilidad"
-            explicacion="Ayudar a difundir la causa en redes, prensa y eventos."
-            icono="/assets/visibilidad.svg"
+            title="Visibilidad"
+            description="Ayudar a difundir la causa en redes, prensa y eventos."
+            icon="ph ph-eye"
           />
         </div>
       </div>
@@ -233,23 +238,22 @@ import IconoTexto from "../Components/Icono-texto.astro";
     <div class="section form-section">
       <div class="content-wrapper">
         <div class="col">
-          <h2>¡Quiero más información!</h2>
+          <h2 class="fraunces-title">¡Quiero más información!</h2>
           <form action="">
             <div class="form-group">
               <label for="name">Nombre y apellidos</label>
               <input type="text" id="name" required />
             </div>
             <div class="form-group-container">
-            <div class="form-group">
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" required />
-            </div>
-            
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" required />
+              </div>
 
-            <div class="form-group">
-              <label for="phone">Teléfono</label>
-              <input type="tel" id="phone" required />
-            </div>
+              <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" required />
+              </div>
             </div>
 
             <div class="form-group">
@@ -265,21 +269,8 @@ import IconoTexto from "../Components/Icono-texto.astro";
       </div>
     </div>
 
-   
-   
-   
-
-   
-   
-   
-   
-   
-   
-   
-
     <script src="/src/scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
     ></script>
   </body>
 </html>
-

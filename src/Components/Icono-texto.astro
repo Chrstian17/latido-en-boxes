@@ -1,13 +1,14 @@
 ---
-const {titulo} = Astro.props
-const {explicacion} = Astro.props
-const {icono} = Astro.props
+const {title} = Astro.props
+const {description} = Astro.props
+const {icon} = Astro.props
 ---
 
 <div class="ayuda">
-    <img src={icono} alt="">
-    <h3 class="">{titulo}</h3>
-    <p class="">{explicacion}</p>
+   
+    <i class={icon}></i>
+    <h3 class="">{title}</h3>
+    <p class="">{description}</p>
 
 </div>
 
@@ -21,17 +22,29 @@ const {icono} = Astro.props
     flex-direction: column;
     gap: 1rem;
     text-align: center;
-
+    transition: transform 0.2s ease;
 
 
 img {
 margin-bottom: 1em;
-  height: 70px;
+  height: 3vw;
 }
 p {
 margin-top: 0rem;
-  max-width: 24ch;
+  max-width: 30ch;
   text-align: center;
+  font: var(--body-copy);
+}
+
+i {
+  font-size: 4rem;
+  color: var(--accent);
+}
+
+&:hover {
+  
+  
+  transform: translateY(-6px);
 }
 
 }
