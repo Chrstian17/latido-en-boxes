@@ -1,0 +1,123 @@
+<form action="">
+         
+            <div class="form-group-container">
+              <div class="form-group">
+                
+              <input type="email" id="email" required placeholder="Tu dirección de correo electrónico."/>
+              </div>
+
+             
+            </div>
+                    <div class="">
+                      <div class="form-group">
+             
+              <textarea name="comment" id="comment" placeholder="Escribe aquí tu consulta o mensaje."></textarea>
+            </div>
+            <a href="#" class="button button-accent"><i class="ph ph-paper-plane-tilt"></i>Enviar</a>
+        </div>
+
+
+          </form>
+
+
+
+          <style>
+
+
+ 
+ 
+
+form {
+  display: grid;
+  gap: 1em;
+
+a {
+    margin-top: 1rem;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--dark);
+  opacity: .6;
+  font: var(--body-copy-s);
+}
+
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+    flex: 1;
+}
+
+.form-group-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+      
+   
+  }
+
+
+
+
+
+input {
+  background-color: var(--light);
+
+  border-radius: 24px;
+  color: var(--dark);
+  padding: 1em 1em;
+  width: 100%;
+  font: var(--body-copy-m);
+  border: 2px solid var(--gray-section);
+  transition: border-color .2s ease;
+  
+
+
+
+
+}
+
+label {
+  font: var(--body-copy-s);
+}
+
+textarea {
+  background-color: var(--light);
+  
+  border-radius: 24px;
+  color: var(--dark);
+  padding: 1em 1em;
+  min-height: 15vh;
+  font: var(--body-copy-m);
+  border: 2px solid var(--gray-section);
+  transition: all .2s ease;
+}
+
+.col {
+  gap: 4rem;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+.content-wrapper {
+  gap: 6rem;
+  align-items: end;
+  
+}
+  
+
+
+
+
+input:focus, textarea:focus {
+  outline: none;
+border: 2px solid rgb(194, 194, 194);
+} 
+
+
+
+          </style>

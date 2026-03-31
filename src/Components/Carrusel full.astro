@@ -1,3 +1,6 @@
+---
+import Dogcard from "../Components/Dog-card.astro";
+---
 
 
 
@@ -6,13 +9,74 @@
     <div class="swiper-wrapper">
     <!-- Slides -->
     
-
-      <div class="swiper-slide" ><img src="/assets/galgo-horizontal-1.webp" alt=""></div>
-      <div class="swiper-slide" ><img src="/assets/galgo-horizontal-2.webp" alt=""></div>
-      <div class="swiper-slide" ><img src="/assets/galgo-horizontal-3.webp" alt=""></div>
-      <div class="swiper-slide" ><img src="/assets/galgo-horizontal-4.webp" alt=""></div>
-      <div class="swiper-slide" ><img src="/assets/galgo-horizontal-5.webp" alt=""></div>
-   
+    <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
+       <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
+      <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
+      <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
+        </div>
+      <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
+        </div>
+      <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
+        </div>
+      <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
+        </div>
+      <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
+        </div>
+      <div class="swiper-slide">
+      <Dogcard
+        name="Matías"
+        age="6 años"
+        location="16'99 €"
+        img="/assets/galgo-horizontal-1.webp"/>
+    </div>
      
    
   </div>
@@ -30,6 +94,7 @@
 
 
 <style>
+
 
 
 
@@ -72,6 +137,8 @@ button {
   box-shadow: 4px 4px 20px rgba(0, 0, 0,0.3);
 }
 
+
+
 }
 
 
@@ -92,12 +159,6 @@ gap: 1rem;
 .swiper-full .swiper-slide {
   align-content: center;
   width: 100%;
-}
-.swiper-full img {
-  width:100%;
-  border-radius: var(--img-corners);
-   aspect-ratio: 16/9;
-  object-fit: cover;
 }
 
 

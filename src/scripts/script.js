@@ -73,7 +73,7 @@ const swiperFull = new Swiper('.swiper.swiper-full', {
       slidesPerView: 1.2, // Un poco de la siguiente foto para invitar a deslizar
     },
     640: {
-      slidesPerView: 1.5,
+      slidesPerView: 2,
       spaceBetween: 12,
       
     }

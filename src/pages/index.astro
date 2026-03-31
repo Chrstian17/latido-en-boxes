@@ -10,6 +10,8 @@ import Carruselinicial from "../Components/Carrusel inicial.astro";
 import Carruselfull from "../Components/Carrusel full.astro";
 import Carruseltienda from "../Components/Carrusel tienda.astro";
 import IconoTexto from "../Components/Icono-texto.astro";
+import Formulario from "../Components/Formulario.astro";
+import Cifra from "../Components/Cifras.astro";
 ---
 
 <!doctype html>
@@ -56,16 +58,18 @@ import IconoTexto from "../Components/Icono-texto.astro";
               Una asociación solidaria de apoyo al galgo que une el mundo del
               motor con la protección animal.
             </p>
-            <a href="#como-ayudar" class="button button-accent">
-              <i class="ph-fill ph-heart"></i>Quiero ayudar</a
-            >
+            <div class="button-group">
+              <a href="#como-ayudar" class="button button-accent">
+                <i class="ph-fill ph-heart"></i>Quiero ayudar</a
+              >
+              <a href="#como-ayudar" class="button button-secondary">
+                Contactar</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-
-
 
     <!-- NOSOTROS -->
 
@@ -73,14 +77,14 @@ import IconoTexto from "../Components/Icono-texto.astro";
       <div class="content-wrapper">
         <div class="col">
           <div class="col-1">
-            <h2 class="fraunces-title">Nuestra<br /> misión</h2>
+            <h2 class="">Nuestra<br /> misión</h2>
             <p>
               Es <strong>impulsar, financiar y dar visibilidad</strong> al trabajo
               de las protectoras de galgos en toda España
             </p>
           </div>
           <div class="col-1">
-            <h2 class="fraunces-title">Nuestra<br /> filosofía</h2>
+            <h2 class="">Nuestra<br /> filosofía</h2>
             <p>
               Transparencia, cercanía y unión con el mundo de la automoción para <strong
                 >crear comunidad y dar visibilidad.</strong
@@ -92,12 +96,53 @@ import IconoTexto from "../Components/Icono-texto.astro";
       </div>
     </div>
 
+    <!-- CIFRAS -->
+    <div class="section cifras-section" >
+      <div class="heading col">
+        <h2 class="">Una realidad que no podemos ignorar</h2>
+        <p>
+          Cuando los galgos no cumplen con las expectativas cinegéticas, muchos
+          son abandonados, maltratados o incluso asesinados.
+        </p>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="col">
+          <Cifra
+            number="12.295"
+            description="Perros de caza abandonados en 2022"
+           
+          />
+        </div>
+        <div class="col">
+          <Cifra
+            number="5.544"
+            description="Galgos abandonados ese mismo año"
+            
+          />
+        </div>
+        <div class="col">
+          <Cifra
+            number="80.000"
+            description="Galgos desechados cada año"
+          />
+        </div>
+        <div class="col">
+          <Cifra
+            number="11%"
+            description="De los abandonos ocurren tras la temporada de caza"
+            
+          />
+        </div>
+      </div>
+    </div>
+
     <!-- EL PROBLEMA -->
 
     <div class="section problema-section">
       <div class="content-wrapper">
         <div class="col">
-          <h2 class="fraunces-title">
+          <h2 class="">
             Una realidad<br /> que no podemos ignorar
           </h2>
           <h3>El problema</h3>
@@ -110,12 +155,14 @@ import IconoTexto from "../Components/Icono-texto.astro";
           <img src="/assets/galgo.svg" alt="" />
           <h3>Cifras que duelen</h3>
           <p>
-            En 2022, fueron abandonados <strong>12.295 perros de caza</strong>, de los cuales
+            En 2022, fueron abandonados <strong>12.295 perros de caza</strong>,
+            de los cuales
             <strong>5.544 eran galgos.</strong>
 
-            <br /><br />Se estima que cada año se <strong>desechan entre 50.000 y 80.000
-            galgos,</strong> considerando también los que son sacrificados fuera de
-            estadísticas oficiales.
+            <br /><br />Se estima que cada año se <strong
+              >desechan entre 50.000 y 80.000 galgos,</strong
+            > considerando también los que son sacrificados fuera de estadísticas
+            oficiales.
 
             <br /><br />La temporada de caza provoca un auge del abandono: en
             2023, un 11 % de los 170.712 perros abandonados se registró justo al
@@ -129,7 +176,7 @@ import IconoTexto from "../Components/Icono-texto.astro";
 
     <div class="section unidos-section">
       <div class="heading col">
-        <h2 class="fraunces-title">Unidos por los latidos</h2>
+        <h2 class="">Unidos por los latidos</h2>
         <p>
           Nuestra asociación actúa como una plataforma de apoyo y conexión entre
           las protectoras de galgos y los donantes, estructurada en cuatro
@@ -176,7 +223,7 @@ import IconoTexto from "../Components/Icono-texto.astro";
     <div class="asimetric-section tienda-section">
       <div class="content-wrapper">
         <div class="col">
-          <h2 class="fraunces-title">Tienda <br />solidaria</h2>
+          <h2 class="">Tienda <br />solidaria</h2>
           <p>
             Los beneficios se destinan a apoyar a protectoras de galgos en
             España, financiando rescates, tratamientos y cuidados urgentes.
@@ -193,16 +240,10 @@ import IconoTexto from "../Components/Icono-texto.astro";
 
     <!-- CARRUSEL IMÁGENES -->
 
-    <div class="section full-section">
-      <div class="content-wrapper">
-        <Carruselfull />
-      </div>
-    </div>
-
     <!-- CÓMO AYUDAR -->
     <div class="section ayuda-section" id="como-ayudar">
       <div class="heading col">
-        <h2 class="fraunces-title">¿Cómo puedo ayudar?</h2>
+        <h2 class="">¿Cómo puedo ayudar?</h2>
       </div>
 
       <div class="content-wrapper">
@@ -237,40 +278,77 @@ import IconoTexto from "../Components/Icono-texto.astro";
       </div>
     </div>
 
-    <!-- FORMULARIO -->
-    <div class="section form-section">
+    <!-- TEAMING -->
+
+    <div class="section teaming-section">
       <div class="content-wrapper">
         <div class="col">
-          <h2 class="fraunces-title">¡Quiero más información!</h2>
-          <form action="">
-            <div class="form-group">
-              <label for="name">Nombre y apellidos</label>
-              <input type="text" id="name" required />
-            </div>
-            <div class="form-group-container">
-              <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" required />
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" required />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="comment">Tu mensaje</label>
-              <textarea name="comment" id="comment"></textarea>
-            </div>
-            <a href="#" class="button button-accent"><i class="ph ph-paper-plane-tilt"></i>Enviar</a>
-          </form>
+          <img src="/assets/teaming-logo.png" alt="" class="teaming-logo" />
+          <h2 class="">Empieza a ayudar hoy</h2>
+          <p>
+            Con solo 1 € al mes, puedes formar parte del latido constante que
+            mantiene este proyecto en marcha. A través de Teaming, tu aportación
+            periódica nos ayuda a dar estabilidad a las protectoras y a
+            responder con rapidez cuando más se necesita. Un euro parece poco,
+            pero cuando muchos latidos se unen, el impacto es real.
+          </p>
+          <a
+            href="https://www.teaming.net/latidoenboxes"
+            class="button button-accent"
+          >
+            <i class="ph-fill ph-heart"></i>Súmate al latido</a
+          >
         </div>
-        <div class="">
-          <img src="/assets/galgo-form.webp" alt="" />
+
+        <div class="col">
+          <img src="/assets/teaming-img.jpeg" alt="" class="teaming-img" />
         </div>
       </div>
     </div>
+
+    <footer>
+      <!-- FOOTER -->
+      <div class="section footer-section">
+        <div class="content-wrapper">
+          <div class="col">
+            <h3 class="">¡Síguenos para estar al día!</h3>
+            <p>
+              Los sorteos y todas las comunicaciones relacionadas se anuncian
+              exclusivamente a través de nuestras redes sociales en
+              @latidosenboxes.
+            </p>
+            <div class="icon-group">
+              <a
+                href="https://www.instagram.com/latidoenboxes/"
+                class="button button-accent"
+              >
+                <i class="ph-fill ph-instagram-logo"></i></a
+              >
+              <a
+                href="mailto:info@latidoenboxes.org"
+                class="button button-accent"
+              >
+                <i class="ph-fill ph-envelope"></i></a
+              >
+            </div>
+            <div class="legal-group">
+              <a href="https://www.instagram.com/latidoenboxes/">Aviso legal</a>
+              <a href="https://www.instagram.com/latidoenboxes/"
+                >Política de privacidad</a
+              >
+              <a href="https://www.instagram.com/latidoenboxes/"
+                >Política de cookies</a
+              >
+            </div>
+          </div>
+
+          <div class="col">
+            <h3 class="">¿Tienes dudas? Contacta con nosotros</h3>
+            <Formulario />
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="/src/scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"

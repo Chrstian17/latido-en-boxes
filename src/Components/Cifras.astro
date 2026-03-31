@@ -1,0 +1,47 @@
+---
+const {number} = Astro.props
+const {description} = Astro.props
+---
+
+<div class="cifra">
+   
+    
+    <h3 class="">{number}</h3>
+    <p class="">{description}</p>
+
+</div>
+
+
+<style>
+
+.cifra {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+
+
+
+p {
+margin-top: 0rem;
+  max-width: 30ch;
+  text-align: center;
+  font: var(--body-copy-m);
+  color: var(--dark-muted-text-2);
+}
+
+h3 {
+  font: var(--headline-m);
+  color: var(--accent);
+}
+
+
+}
+
+
+
+
+</style>

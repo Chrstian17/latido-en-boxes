@@ -1,0 +1,89 @@
+---
+const {name, age, location, img} = Astro.props
+---
+
+<div class="card-container">
+    <div class="card-image">
+        <img src={img} alt="">
+        
+    </div>
+    <div class="card-text">
+        <div class="info">
+        <h3 class="name">{name}</h3>
+        <p class="age">{age}</p>
+        </div>
+     
+       <p class="location">{location}</p>
+    </div>  
+</div>
+
+<style>
+.card-container {
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    overflow: hidden;
+    border-radius: var(--img-corners);
+    transition: all .2s ease;
+    box-shadow: var(--shadow);
+    height: 100%;
+&:hover {
+    transform: scale(.98);
+}
+}
+
+.card-text {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 2rem 1.4rem 1.4rem;
+   flex-grow: 1;
+    
+    
+.name {
+    color: var(--dark);
+    margin: 0;
+    font: var(--h3);
+}
+
+.description {
+    font: var(--body-copy-s);
+    color: var(--dark-muted-text-2);
+    
+} 
+.price {
+    font: var(--h3);
+    color: var(--accent);
+   
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    flex-grow: 1;
+
+}
+
+}
+
+
+.card-image {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+
+     img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+   
+    margin-bottom: 1rem;
+}
+}
+
+
+
+
+</style>
