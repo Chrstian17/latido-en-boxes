@@ -59,12 +59,10 @@ import Cifra from "../Components/Cifras.astro";
               motor con la protección animal.
             </p>
             <div class="button-group">
-              <a href="#como-ayudar" class="button button-accent">
-                <i class="ph-fill ph-heart"></i>Quiero ayudar</a
-              >
-              <a href="#como-ayudar" class="button button-secondary">
-                Contactar</a
-              >
+              <a href="#como-ayudar" class="button button-accent button-top-space">
+                <i class="ph-fill ph-heart"></i>Quiero ayudar</a>
+              
+              
             </div>
           </div>
         </div>
@@ -77,14 +75,14 @@ import Cifra from "../Components/Cifras.astro";
       <div class="content-wrapper">
         <div class="col">
           <div class="col-1">
-            <h2 class="">Nuestra<br /> misión</h2>
+            <h2 class="">Nuestra misión</h2>
             <p>
               Es <strong>impulsar, financiar y dar visibilidad</strong> al trabajo
               de las protectoras de galgos en toda España
             </p>
           </div>
           <div class="col-1">
-            <h2 class="">Nuestra<br /> filosofía</h2>
+            <h2 class="">Nuestra filosofía</h2>
             <p>
               Transparencia, cercanía y unión con el mundo de la automoción para <strong
                 >crear comunidad y dar visibilidad.</strong
@@ -139,7 +137,7 @@ import Cifra from "../Components/Cifras.astro";
 
     <!-- EL PROBLEMA -->
 
-    <div class="section problema-section">
+    <div class="section problema-section" style="display:none">
       <div class="content-wrapper">
         <div class="col">
           <h2 class="">
@@ -186,31 +184,38 @@ import Cifra from "../Components/Cifras.astro";
 
       <div class="content-wrapper">
         <div class="col">
-          <p>
-            En primer lugar, organizamos <strong
-              >eventos solidarios vinculados al mundo del motor</strong
-            >, como rutas benéficas, concentraciones con clubs y pilotos y
-            encuentros con talleres o concesionarios, destinando íntegramente
-            las inscripciones y aportaciones a las protectoras colaboradoras.
-
-            <br /><br /> n segundo lugar, desarrollamos <strong
+          <details name="accordion">
+            <summary>Eventos solidarios</summary>
+                <p>En primer lugar, organizamos <strong>eventos solidarios vinculados al mundo del motor</strong
+              >, como rutas benéficas, concentraciones con clubs y pilotos y
+              encuentros con talleres o concesionarios, destinando íntegramente
+              las inscripciones y aportaciones a las protectoras colaboradoras.</p>
+          </details>
+          <details name="accordion">
+            <summary>Eventos solidarios</summary>
+                <p>En segundo lugar, desarrollamos <strong
               >campañas de concienciación y visibilidad</strong
             > mediante colaboraciones con influencers, figuras del motor y medios,
             generando contenido que difunde la realidad del galgo y su abandono, además
-            de impartir charlas en colegios, talleres y eventos.
-
-            <br /><br />En tercer lugar, producimos <strong
+            de impartir charlas en colegios, talleres y eventos.</p>
+          </details>
+          <details name="accordion">
+            <summary>Eventos solidarios</summary>
+                <p>En tercer lugar, producimos <strong
               >merchandising solidario</strong
             > como camisetas, pegatinas y accesorios personalizados, cuyos beneficios
-            permiten financiar necesidades urgentes de las asociaciones.
-
-            <br /><br />Finalmente, articulamos una <strong>red de apoyo</strong
+            permiten financiar necesidades urgentes de las asociaciones.</p>
+          </details>
+          <details name="accordion">
+            <summary>Eventos solidarios</summary>
+                <p>Finalmente, articulamos una <strong>red de apoyo</strong
             > que canaliza donaciones económicas y materiales, así como servicios
             como medicación, pienso, voluntariado, casas de acogida y soporte especializado
             en comunicación, diseño y promoción. Todo ello se desarrolla con la intención
             de crear, a medio o largo plazo, un refugio propio que amplíe nuestra
-            capacidad de rescate y cuidado de galgos.
-          </p>
+            capacidad de rescate y cuidado de galgos.</p>
+          </details>
+
         </div>
         <div class="col">
           <img src="/assets/galgo-taller.webp" alt="" />
@@ -223,14 +228,14 @@ import Cifra from "../Components/Cifras.astro";
     <div class="asimetric-section tienda-section">
       <div class="content-wrapper">
         <div class="col">
-          <h2 class="">Tienda <br />solidaria</h2>
+          <h2 class="">Tienda solidaria</h2>
           <p>
             Los beneficios se destinan a apoyar a protectoras de galgos en
             España, financiando rescates, tratamientos y cuidados urgentes.
             <br /><br />Comprar en nuestra tienda es transformar un gesto
             cotidiano en una segunda oportunidad.
           </p>
-          <a href="#" class="button button-light"
+          <a href="#" class="button button-light button-top-space"
             ><i class="ph-bold ph-download-simple"></i>Descargar</a
           >
         </div>
@@ -294,7 +299,7 @@ import Cifra from "../Components/Cifras.astro";
           </p>
           <a
             href="https://www.teaming.net/latidoenboxes"
-            class="button button-accent"
+            class="button button-accent button-top-space"
           >
             <i class="ph-fill ph-heart"></i>Súmate al latido</a
           >
@@ -311,7 +316,7 @@ import Cifra from "../Components/Cifras.astro";
       <div class="section footer-section">
         <div class="content-wrapper">
           <div class="col">
-            <h3 class="">¡Síguenos para estar al día!</h3>
+            <h2 class="">¡Síguenos para estar al día!</h2>
             <p>
               Los sorteos y todas las comunicaciones relacionadas se anuncian
               exclusivamente a través de nuestras redes sociales en
