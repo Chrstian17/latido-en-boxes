@@ -12,6 +12,9 @@ import Carruseltienda from "../Components/Carrusel tienda.astro";
 import IconoTexto from "../Components/Icono-texto.astro";
 import Formulario from "../Components/Formulario.astro";
 import Cifra from "../Components/Cifras.astro";
+import CarruselFull from "../Components/Carrusel full.astro";
+import CarruselTienda from "../Components/Carrusel tienda.astro";
+import Cifras from "../Components/Cifras.astro";
 ---
 
 <!doctype html>
@@ -60,7 +63,7 @@ import Cifra from "../Components/Cifras.astro";
             </p>
             <div class="button-group">
               <a href="#como-ayudar" class="button button-accent button-top-space">
-                <i class="ph-fill ph-heart"></i>Quiero ayudar</a>
+                Quiero ayudar<i class="ph ph-heart"></i></a>
               
               
             </div>
@@ -105,70 +108,13 @@ import Cifra from "../Components/Cifras.astro";
       </div>
 
       <div class="content-wrapper">
-        <div class="col">
-          <Cifra
-            number="12.295"
-            description="Perros de caza abandonados en 2022"
-           
-          />
-        </div>
-        <div class="col">
-          <Cifra
-            number="5.544"
-            description="Galgos abandonados ese mismo año"
-            
-          />
-        </div>
-        <div class="col">
-          <Cifra
-            number="80.000"
-            description="Galgos desechados cada año"
-          />
-        </div>
-        <div class="col">
-          <Cifra
-            number="11%"
-            description="De los abandonos ocurren tras la temporada de caza"
-            
-          />
-        </div>
+        <Cifras></Cifras>
       </div>
     </div>
 
     <!-- EL PROBLEMA -->
 
-    <div class="section problema-section" style="display:none">
-      <div class="content-wrapper">
-        <div class="col">
-          <h2 class="">
-            Una realidad<br /> que no podemos ignorar
-          </h2>
-          <h3>El problema</h3>
-          <p>
-            Cuando los galgos no cumplen con las expectativas cinegéticas,
-            muchos son abandonados, maltratados o incluso asesinados.
-          </p>
-        </div>
-        <div class="col">
-          <img src="/assets/galgo.svg" alt="" />
-          <h3>Cifras que duelen</h3>
-          <p>
-            En 2022, fueron abandonados <strong>12.295 perros de caza</strong>,
-            de los cuales
-            <strong>5.544 eran galgos.</strong>
 
-            <br /><br />Se estima que cada año se <strong
-              >desechan entre 50.000 y 80.000 galgos,</strong
-            > considerando también los que son sacrificados fuera de estadísticas
-            oficiales.
-
-            <br /><br />La temporada de caza provoca un auge del abandono: en
-            2023, un 11 % de los 170.712 perros abandonados se registró justo al
-            terminar esa época.
-          </p>
-        </div>
-      </div>
-    </div>
 
     <!-- UNIDOS POR LOS LATIDOS -->
 
@@ -192,7 +138,7 @@ import Cifra from "../Components/Cifras.astro";
               las inscripciones y aportaciones a las protectoras colaboradoras.</p>
           </details>
           <details name="accordion">
-            <summary>Eventos solidarios</summary>
+            <summary>Campañas de concienciación</summary>
                 <p>En segundo lugar, desarrollamos <strong
               >campañas de concienciación y visibilidad</strong
             > mediante colaboraciones con influencers, figuras del motor y medios,
@@ -200,14 +146,14 @@ import Cifra from "../Components/Cifras.astro";
             de impartir charlas en colegios, talleres y eventos.</p>
           </details>
           <details name="accordion">
-            <summary>Eventos solidarios</summary>
+            <summary>Merchandising solidario</summary>
                 <p>En tercer lugar, producimos <strong
               >merchandising solidario</strong
             > como camisetas, pegatinas y accesorios personalizados, cuyos beneficios
             permiten financiar necesidades urgentes de las asociaciones.</p>
           </details>
           <details name="accordion">
-            <summary>Eventos solidarios</summary>
+            <summary>Red de apoyo</summary>
                 <p>Finalmente, articulamos una <strong>red de apoyo</strong
             > que canaliza donaciones económicas y materiales, así como servicios
             como medicación, pienso, voluntariado, casas de acogida y soporte especializado
@@ -235,8 +181,8 @@ import Cifra from "../Components/Cifras.astro";
             <br /><br />Comprar en nuestra tienda es transformar un gesto
             cotidiano en una segunda oportunidad.
           </p>
-          <a href="#" class="button button-light button-top-space"
-            ><i class="ph-bold ph-download-simple"></i>Descargar</a
+          <a href="#" class="button button-light button-top-space">
+            Descargar<i class="ph-bold ph-download-simple"></i></a
           >
         </div>
         <Carruseltienda />
@@ -244,6 +190,15 @@ import Cifra from "../Components/Cifras.astro";
     </div>
 
     <!-- CARRUSEL IMÁGENES -->
+
+<div class="section full-section">
+  <div class="content-wrapper">
+    
+      <CarruselFull></CarruselFull>
+    
+  </div>
+</div>
+
 
     <!-- CÓMO AYUDAR -->
     <div class="section ayuda-section" id="como-ayudar">
@@ -299,9 +254,8 @@ import Cifra from "../Components/Cifras.astro";
           </p>
           <a
             href="https://www.teaming.net/latidoenboxes"
-            class="button button-accent button-top-space"
-          >
-            <i class="ph-fill ph-heart"></i>Súmate al latido</a
+            class="button button-accent button-top-space" target="_blank" rel="noopener noreferrer">
+            Súmate al latido<i class="ph ph-heart"></i></a
           >
         </div>
 
@@ -319,37 +273,31 @@ import Cifra from "../Components/Cifras.astro";
             <h2 class="">¡Síguenos para estar al día!</h2>
             <p>
               Los sorteos y todas las comunicaciones relacionadas se anuncian
-              exclusivamente a través de nuestras redes sociales en
-              @latidosenboxes.
+              exclusivamente a través de nuestras redes sociales.
             </p>
             <div class="icon-group">
               <a
                 href="https://www.instagram.com/latidoenboxes/"
-                class="button button-accent"
-              >
-                <i class="ph-fill ph-instagram-logo"></i></a
-              >
-              <a
-                href="mailto:info@latidoenboxes.org"
-                class="button button-accent"
-              >
-                <i class="ph-fill ph-envelope"></i></a
-              >
+                class="button button-accent" target="_blank" rel="noopener noreferrer">
+                <i class="ph ph-instagram-logo"></i></a>
+                <p>@latidosenboxes</p>
+          
+              
             </div>
-            <div class="legal-group">
-              <a href="https://www.instagram.com/latidoenboxes/">Aviso legal</a>
-              <a href="https://www.instagram.com/latidoenboxes/"
-                >Política de privacidad</a
-              >
-              <a href="https://www.instagram.com/latidoenboxes/"
-                >Política de cookies</a
-              >
-            </div>
+         
           </div>
 
           <div class="col">
             <h3 class="">¿Tienes dudas? Contacta con nosotros</h3>
             <Formulario />
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="legal-group col">
+            <a href="https://www.instagram.com/latidoenboxes/">Aviso legal</a>
+              
+              <a href="https://www.instagram.com/latidoenboxes/"
+                >Política de cookies</a>
           </div>
         </div>
       </div>

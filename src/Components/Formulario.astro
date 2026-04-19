@@ -1,9 +1,9 @@
-<form action="">
+<form action="https://api.web3forms.com/submit" method="POST">
          
             <div class="form-group-container">
               <div class="form-group">
-                
-              <input type="email" id="email" required placeholder="Tu dirección de correo electrónico."/>
+                 <input type="hidden" name="access_key" value="0d864027-4774-4698-a66e-aaf65cb99da5">
+              <input type="email" name="email" id="email" required placeholder="Tu dirección de correo electrónico."/>
               </div>
 
              
@@ -11,11 +11,14 @@
                     <div class="">
                       <div class="form-group">
              
-              <textarea name="comment" id="comment" placeholder="Escribe aquí tu consulta o mensaje."></textarea>
+              <textarea name="mensaje" id="mensaje" required placeholder="Escribe aquí tu consulta o mensaje."></textarea>
             </div>
-            <a href="#" class="button button-accent button-top-space"><i class="ph ph-paper-plane-tilt"></i>Enviar</a>
-        </div>
 
+            <button type="submit" class="button button-accent">
+              Enviar<i class="ph ph-paper-plane-tilt"></i></button>
+            
+        </div>
+          <p>Al enviar este formulario, aceptas nuestra Política de Privacidad.</p>
 
           </form>
 
@@ -33,8 +36,12 @@ form {
 
 
 input::placeholder, textarea::placeholder {
-  color: var(--dark);
-  opacity: .6;
+  color: var(--light);
+  opacity: .5;
+  font: var(--body-copy-s);
+}
+p {
+  color: var(--dark-muted-text-2);
   font: var(--body-copy-s);
 }
 
@@ -60,14 +67,14 @@ input::placeholder, textarea::placeholder {
 
 
 input {
-  background-color: var(--light);
+  background-color: var(--dark-muted-text);
 
   border-radius: 24px;
-  color: var(--dark);
+  color: var(--light);
   padding: 1em 1em;
   width: 100%;
   font: var(--body-copy-m);
-  border: 2px solid var(--gray-section);
+  border: 2px solid var(--dark);
   transition: border-color .2s ease;
   
 
@@ -81,14 +88,14 @@ label {
 }
 
 textarea {
-  background-color: var(--light);
+  background-color: var(--dark-muted-text);
   
   border-radius: 24px;
-  color: var(--dark);
+  color: var(--light);
   padding: 1em 1em;
   min-height: 15vh;
   font: var(--body-copy-m);
-  border: 2px solid var(--gray-section);
+  border: 2px solid var(--dark);
   transition: all .2s ease;
 }
 
@@ -112,9 +119,11 @@ img {
 
 input:focus, textarea:focus {
   outline: none;
-border: 2px solid rgb(194, 194, 194);
+border: 2px solid var(--dark-muted-text-2);
 } 
 
 
 
           </style>
+
+

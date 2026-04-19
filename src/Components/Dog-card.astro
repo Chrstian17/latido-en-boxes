@@ -8,13 +8,18 @@ const {name, age, location, img} = Astro.props
         
     </div>
     <div class="card-text">
-        <div class="info">
+        
         <h3 class="name">{name}</h3>
-        <p class="age">{age}</p>
+        <div class="age">
+            <i class="ph-bold ph-cake"></i><p>{age}</p>
         </div>
+        <div class="location">
+        <i class="ph-bold ph-house-line"></i><p>{location}</p>
+        </div>
+        
      
-       <p class="location">{location}</p>
-    </div>  
+       
+    
 </div>
 
 <style>
@@ -26,10 +31,10 @@ const {name, age, location, img} = Astro.props
     overflow: hidden;
     border-radius: var(--img-corners);
     transition: all .2s ease;
-    box-shadow: var(--shadow);
+    box-shadow: none;
     height: 100%;
 &:hover {
-    transform: scale(.98);
+    transform: scale(.99);
 }
 }
 
@@ -37,34 +42,30 @@ const {name, age, location, img} = Astro.props
 
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: .3rem;
     padding: 0 2rem 1.4rem 1.4rem;
    flex-grow: 1;
     
     
 .name {
     color: var(--dark);
-    margin: 0;
-    font: var(--h3);
+    margin-bottom: .5rem;
+    font: var(--headline-s);
 }
 
-.description {
-    font: var(--body-copy-s);
+.age, .location {
+    font: var(--body-copy-l);
     color: var(--dark-muted-text-2);
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+
+    i {
+        color: var(--accent-500);
+    }
     
 } 
-.price {
-    font: var(--h3);
-    color: var(--accent);
-   
-}
-.info {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    flex-grow: 1;
-
-}
 
 }
 

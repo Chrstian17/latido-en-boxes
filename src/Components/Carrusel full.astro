@@ -2,105 +2,89 @@
 import Dogcard from "../Components/Dog-card.astro";
 ---
 
-
+<div class="swiper-outer">
 
           <div class="swiper swiper-full ">
   <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
     <!-- Slides -->
     
-    <div class="swiper-slide">
-      <Dogcard
-        name="Matías"
-        age="6 años"
-        location="16'99 €"
-        img="/assets/galgo-horizontal-1.webp"/>
-    </div>
-       <div class="swiper-slide">
-      <Dogcard
-        name="Matías"
-        age="6 años"
-        location="16'99 €"
-        img="/assets/galgo-horizontal-1.webp"/>
-    </div>
+  
+     
+     
+   
+    
+     
+        
       <div class="swiper-slide">
       <Dogcard
-        name="Matías"
-        age="6 años"
-        location="16'99 €"
+        name="Bravo"
+        age="5 años"
+        location="Alcobendas, Madrid"
         img="/assets/galgo-horizontal-1.webp"/>
-    </div>
-      <div class="swiper-slide">
+       </div>
+        <div class="swiper-slide">
       <Dogcard
-        name="Matías"
-        age="6 años"
-        location="16'99 €"
-        img="/assets/galgo-horizontal-1.webp"/>
-    </div>
-        </div>
-      <div class="swiper-slide">
+        name="Luna"
+        age="3 años"
+        location="Dos Hermanas, Sevilla"
+        img="/assets/galgo-horizontal-2.webp"/>
+       </div>
+        <div class="swiper-slide">
       <Dogcard
-        name="Matías"
-        age="6 años"
-        location="16'99 €"
-        img="/assets/galgo-horizontal-1.webp"/>
-    </div>
-        </div>
-      <div class="swiper-slide">
+        name="Gala"
+        age="2 años"
+        location="Paterna, Valencia"
+        img="/assets/galgo-horizontal-3.webp"/>
+       </div>
+        <div class="swiper-slide">
       <Dogcard
-        name="Matías"
-        age="6 años"
-        location="16'99 €"
-        img="/assets/galgo-horizontal-1.webp"/>
-    </div>
-        </div>
-      <div class="swiper-slide">
+        name="Teo"
+        age="7 años"
+        location="Utebo, Zaragoza"
+        img="/assets/galgo-horizontal-4.webp"/>
+       </div>
+        <div class="swiper-slide">
       <Dogcard
-        name="Matías"
-        age="6 años"
-        location="16'99 €"
-        img="/assets/galgo-horizontal-1.webp"/>
-    </div>
-        </div>
-      <div class="swiper-slide">
+        name="Nala"
+        age="4 años"
+        location="Torremolinos, Málaga"
+        img="/assets/galgo-horizontal-5.webp"/>
+       </div>
+        <div class="swiper-slide">
       <Dogcard
-        name="Matías"
+        name="Simón"
         age="6 años"
-        location="16'99 €"
-        img="/assets/galgo-horizontal-1.webp"/>
-    </div>
-        </div>
-      <div class="swiper-slide">
-      <Dogcard
-        name="Matías"
-        age="6 años"
-        location="16'99 €"
-        img="/assets/galgo-horizontal-1.webp"/>
-    </div>
+        location="Miranda de Ebro, Burgos"
+        img="/assets/galgo-horizontal-6.webp"/>
+       </div>
+     
+     
      
    
   </div>
+
+
+
+
+</div>
+
   <div class="swiper-nav">
     <button class="swiper-arrow button button-light is-prev"><i class="ph-bold ph-caret-left"></i></button>
       <button class="swiper-arrow button button-light is-next"><i class="ph-bold ph-caret-right"></i></button>
    
 
   </div>
-
-
-
 </div>
-
 
 
 <style>
 
 
 
+.swiper-outer .swiper-arrow {
 
-.swiper-full .swiper-arrow {
-
-  padding: 1em;
+  padding: .8em;
   border: none;
   display: flex;
   cursor: pointer;
@@ -111,25 +95,27 @@ import Dogcard from "../Components/Dog-card.astro";
 
 
 
-.swiper-full .swiper-nav {
+.swiper-outer .swiper-nav {
   
 
 display: flex;
 flex-direction: row;
 position: absolute;
 z-index: 10;
-top: 50%; 
+top: 45%; 
     transform: translateY(-50%);
-    width: 100%;
+   
     justify-content: space-between;
-    padding: 0 5vw;
-    padding-bottom: 1rem;
+    width: calc(100% + 80px); /* sobresale 20px a cada lado */
+    
+    left: -40px; /* desplaza para cubrir el padding */
+    
 
 
 i {
 
  
- font-size: 34px;
+ font-size:1.75rem;
  
 }
 
@@ -146,13 +132,17 @@ button {
 
 .swiper-full {
   position: relative;
+  padding-bottom: 5rem;
+  
+  
+  
 }
 
 .swiper {
  width: 100%;
 
 
-gap: 1rem;
+
   
 }
 
@@ -162,6 +152,11 @@ gap: 1rem;
 }
 
 
+.swiper-outer {
+  position: relative;
+  
+  
+}
 
 
 </style>
