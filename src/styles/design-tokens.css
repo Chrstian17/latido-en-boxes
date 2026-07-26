@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+:root {
+
+/* ==========================================================
+   Primitive tokens
+   ========================================================== */
+
+/* Reds */
+--red-100: #FDF2F3;
+--red-200: #F9D9DC;
+--red-300: #F2B4BA;
+--red-400: #EA7A84;
+--red-500: #D93A46;
+--red-600: #C92F3A;
+--red-700: #A7252F;
+--red-800: #831E25;
+--red-900: #5F151A;
+
+/* Grays */
+--gray-100: #FAFAFA;
+--gray-200: #EEEEEE;
+--gray-300: #E2E2E2;
+--gray-400: #C5C5C5;
+--gray-500: #9E9E9E;
+--gray-600: #777777;
+--gray-700: #585858;
+--gray-800: #3A3A3A;
+--gray-900: #202020;
+
+/* Brand specific */
+--teaming-green: #65AF43;
+--teaming-light-green: #EFF8ED;
+
+--bizum-blue: #05C0C7;
+--bizum-light-blue: #E7FCFC;
+
+/* ==========================================================
+   Semantic color tokens
+   ========================================================== */
+
+/* Brand */
+--primary: var(--red-500);
+--primary-hover: var(--red-600);
+--primary-active: var(--red-700);
+--primary-soft: var(--red-100);
+
+/* Text */
+--text-default: var(--gray-900);
+--text-secondary: var(--gray-700);
+--text-muted: var(--gray-500);
+
+--text-inverse: var(--gray-100);
+--text-inverse-secondary: var(--gray-300);
+--text-inverse-muted: var(--gray-500);
+
+/* Backgrounds / Surfaces */
+--surface-default: #FFFFFF;
+--surface-alt: var(--gray-100);
+--surface-dark: var(--gray-900);
+
+/* Borders */
+--border-default: var(--gray-300);
+--border-subtle: var(--gray-200);
+--border-strong: var(--gray-500);
+
+/* Icons */
+--icon-default: var(--gray-700);
+--icon-muted: var(--gray-500);
+--icon-inverse: var(--gray-100);
+
+/* Links */
+--link: var(--primary);
+--link-hover: var(--primary-hover);
+
+/* Buttons */
+--button-primary-bg: var(--primary);
+--button-primary-bg-hover: var(--primary-hover);
+--button-primary-text: var(--gray-100);
+
+--button-secondary-bg: transparent;
+--button-secondary-border: var(--primary);
+--button-secondary-text: var(--primary);
+
+/* Inputs */
+--input-bg: var(--gray-100);
+--input-border: var(--gray-300);
+--input-border-focus: var(--primary);
+--input-placeholder: var(--gray-500);
+
+/* Cards */
+--card-bg: #FFFFFF;
+--card-border: var(--gray-200);
+
+/* Special surfaces */
+--surface-teaming: var(--teaming-light-green);
+--surface-bizum: var(--bizum-light-blue);
+
+/* Shadows */
+--shadow-s: 0 2px 8px rgba(0,0,0,.06);
+--shadow-m: 8px 8px 8px rgba(0,0,0,.09);
+--shadow-l: 0 12px 32px rgba(0,0,0,.14);
+
+/* ==========================================================
+   Typography
+   ========================================================== */
+
+--font-body: "Inter", sans-serif;
+--font-heading: "Fraunces", serif;
+
+
+
+
+--button-text: 600 1.2rem / 1.4 var(--font-primary);
+
+
+--display-size: clamp(5rem, 6.091rem + 1vw, 9rem); 
+--heading-l-size: clamp(2.5rem, 1vw + 3rem, 5rem);
+--heading-m-size: 1.75rem;
+--heading-s-size: 1.4rem;
+--body-l-size:  1.5rem;
+--body-m-size:  1.1rem;
+--body-s-size:  .9rem;
+
+--button-text: var(--weight-medium) var(--body-m-size)/var(--leading-none) var(--font-body);
+
+--weight-bold: 700;
+--weight-medium: 500;
+--weight-regular: 400;
+
+
+--display: 800 clamp(5rem, 6.091rem + 1vw, 9rem)/var(--leading-none) var(--font-heading); 
+--heading-l: 700 clamp(2.5rem, 1vw + 3rem, 5rem)/var(--leading-tightest) var(--font-heading) ;
+--heading-m: var(--weight-bold) 1.75rem/var(--leading-normal) var(--font-body);
+--heading-s: var(--weight-medium) 1.4rem/var(--leading-normal) var(--font-body);
+--body-l: var(--weight-medium)  1.5rem/var(--leading-normal) var(--font-body);
+--body-m: var(--weight-regular)  1.1rem/var(--leading-normal) var(--font-body);
+--body-s: var(--weight-regular)  .9rem/var(--leading-normal) var(--font-body);
+
+
+
+
+--tracking-tightest: -0.06em;
+--tracking-tighter: -0.04em;
+--tracking-tight: -0.02em;
+--tracking-normal: 0;
+--tracking-wide: 0.02em;
+--tracking-wider: 0.04em;
+--tracking-widest: 0.08em;
+
+
+--leading-none: 1;
+--leading-tightest: 1.1;
+--leading-tighter: 1.2;
+--leading-tight: 1.35;
+--leading-normal: 1.5;
+--leading-relaxed: 1.65;
+--leading-loose: 1.8;
+
+/* ==========================================================
+   Radius
+   ========================================================== */
+
+--radius-s: .75rem;
+--radius-m: 1.5rem;
+--radius-l: 2.5rem;
+--radius-pill: 999px;
+
+/* ==========================================================
+   Spacing
+   ========================================================== */
+
+  --space-0: 0;
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem;    /* 16px */
+  --space-5: 1.5rem;  /* 24px */
+  --space-6: 2rem;    /* 32px */
+  --space-7: 3rem;    /* 48px */
+  --space-8: 4rem;    /* 64px */
+  --space-9: 6rem;    /* 96px */
+  --space-10: 8rem;   /* 128px */
+
+--section-spacing: clamp(4rem, 6vw, 10rem);
+--content-spacing: clamp(4rem, 5vw, 6rem);
+
+--padding-block: clamp(2rem, 4vw + 1.2rem, 6rem);
+--padding-inline: clamp(1rem, 1vw + .8rem, 2rem);
+
+/* ==========================================================
+   Layout
+   ========================================================== */
+
+--content-width: clamp(750px, 85%, 1440px);
+
+/* ==========================================================
+   Component sizing
+   ========================================================== */
+
+--image-radius: var(--radius-l);
+--card-radius: var(--radius-l);
+
+/* ==========================================================
+   Animation
+   ========================================================== */
+
+--default-transition: all .2s ease;
+--move-up: translateY(-3px);
+
+}
+

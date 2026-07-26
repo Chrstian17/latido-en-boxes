@@ -1,4 +1,4 @@
-const swiperTienda = new Swiper('.swiper.swiper-tienda', {
+const swiperShop = new Swiper('.swiper.swiper--shop', {
   direction: 'horizontal',
   loop: true,
 slidesPerView: 1.2, 
@@ -27,14 +27,14 @@ autoHeight: false,
 
   navigation: {
     // Asegúrate de que estas clases existan en tu HTML
-    nextEl: '.swiper-tienda .is-next', 
-    prevEl: '.swiper-tienda .is-prev',
+    nextEl: '.swiper--shop .is-next', 
+    prevEl: '.swiper--shop .is-prev',
   },
 
 
 });
 
-const swiperInicial = new Swiper('.swiper.swiper-inicial', {
+const swiperAbout = new Swiper('.swiper.swiper--about', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 1,
@@ -43,7 +43,7 @@ const swiperInicial = new Swiper('.swiper.swiper-inicial', {
   // Todo lo que sea responsive va AQUÍ dentro
   breakpoints: {
     420: {
-      slidesPerView: 1.2, // Un poco de la siguiente foto para invitar a deslizar
+      slidesPerView: 1.2, 
     centeredSlides: true,
      spaceBetween: 12,
     },
@@ -61,14 +61,14 @@ const swiperInicial = new Swiper('.swiper.swiper-inicial', {
 
   navigation: {
     // Asegúrate de que estas clases existan en tu HTML
-    nextEl: '.swiper-inicial .is-next', 
-    prevEl: '.swiper-inicial .is-prev',
+    nextEl: '.swiper--about .is-next', 
+    prevEl: '.swiper--about .is-prev',
   },
 
 
 });
 
-const swiperFull = new Swiper('.swiper.swiper-full', {
+const swiperAdoptions = new Swiper('.swiper.swiper--adoptions', {
   direction: 'horizontal',
   loop: true,
   

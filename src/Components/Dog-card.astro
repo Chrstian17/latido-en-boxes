@@ -3,18 +3,18 @@ const {name, age, location, img} = Astro.props
 ---
 
 <div class="card-container">
-    <div class="card-image">
+    <div class="card__image">
         <img src={img} alt="">
         
     </div>
-    <div class="card-text">
+    <div class="card__content">
         
-        <h3 class="name">{name}</h3>
+        <h3 class="name heading-m">{name}</h3>
         <div class="age">
-            <i class="ph-bold ph-cake"></i><p>{age}</p>
+            <i class="ph-bold ph-cake"></i><p class="body-m">{age}</p>
         </div>
         <div class="location">
-        <i class="ph-bold ph-house-line"></i><p>{location}</p>
+        <i class="ph-bold ph-house-line"></i><p class="body-m">{location}</p>
         </div>
         
      
@@ -24,45 +24,47 @@ const {name, age, location, img} = Astro.props
 
 <style>
 .card-container {
-    background-color: var(--light);
+    background-color: var(--gray-100);
     display: flex;
     flex-direction: column;
-    gap: 0rem;
+    gap: var(--space-1);
     overflow: hidden;
-    border-radius: var(--img-corners);
+    border-radius: var(--radius-l);
     transition: all .2s ease;
-    box-shadow: none;
+    
     height: 100%;
 &:hover {
-    transform: scale(.99);
+    transform: scale(.98);
+    box-shadow: var(--shadow-s);
 }
 }
 
-.card-text {
+.card__content {
 
     display: flex;
     flex-direction: column;
-    gap: .3rem;
+    gap: var(--space-0);
     padding: 0 2rem 1.4rem 1.4rem;
    flex-grow: 1;
     
     
-.name {
-    color: var(--dark);
-    margin-bottom: .5rem;
-    font: var(--headline-s);
+h3 {
+    
+    margin-bottom: var(--space-2);
+    
 }
 
 .age, .location {
-    font: var(--body-copy-l);
-    color: var(--dark-muted-text-2);
+    
+    color: var(--text-secondary);
     display: flex;
     flex-direction: row;
-    gap: .5rem;
+    gap: var(--space-2);
     align-items: center;
 
     i {
-        color: var(--accent-500);
+        color: var(--text-secondary);
+        
     }
     
 } 
@@ -70,7 +72,7 @@ const {name, age, location, img} = Astro.props
 }
 
 
-.card-image {
+.card__image {
     display: flex;
     flex-direction: column;
     gap: .2rem;

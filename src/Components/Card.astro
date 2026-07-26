@@ -2,69 +2,66 @@
 const {title, description, price, img} = Astro.props
 ---
 
-<div class="card-container">
-    <div class="card-image">
+<div class="card__container">
+    <div class="card__image">
         <img src={img} alt="">
         
     </div>
-    <div class="card-text">
-        <div class="info">
-        <h3 class="name">{title}</h3>
-        <p class="description">{description}</p>
+    <div class="card__content">
+        <div class="card__info">
+        <h3 class="name heading-m">{title}</h3>
+        <p class="description body-m">{description}</p>
         </div>
      
-       <p class="price">{price}</p>
+       <p class="price body-l">{price}</p>
     </div>  
 </div>
 
 <style>
-.card-container {
-    background-color: var(--light);
+.card__container {
+    background-color: var(--gray-100);
     display: flex;
     flex-direction: column;
-    gap: 0rem;
+    gap: var(--space-4);
     overflow: hidden;
-    border-radius: var(--img-corners);
-    transition: all .2s ease;
-    box-shadow: var(--shadow);
+    border-radius: var(--radius-l);
+    transition: all .15s ease;
+    
     height: 100%;
 &:hover {
-    transform: scale(.99);
+    transform: scale(0.99);
+    box-shadow: var(--shadow-m);
 }
 }
 
-.card-text {
+.card__content {
 
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 0 2rem 1.4rem 1.4rem;
+    gap: var(--space-4);
+    padding: 0 var(--space-3) var(--space-5) var(--space-5);
    flex-grow: 1;
 
 
    
     
     
-.name {
-    color: var(--dark);
-    margin: 0;
-    font: var(--headline-s);
-}
+
 
 .description {
-    font: var(--body-copy-s);
-    color: var(--dark-muted-text-2);
+   
+    color: var(--text-secondary);
     
 } 
 .price {
-    font: var(--headline-s);
-    color: var(--accent-500);
+    
+    color: var(--primary);
    
 }
-.info {
+.card__info {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: var(--space-2);
     flex-grow: 1;
 
 }
@@ -72,24 +69,24 @@ const {title, description, price, img} = Astro.props
 }
 
 
-.card-image {
+.card__image {
     display: flex;
     flex-direction: column;
-    gap: .2rem;
+    gap: var(--space-2);
 
      img {
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
    
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-3);
 }
 }
 
 @media (max-width: 767px) {
 
- .card-text {
-   gap: .5rem;
+ .card__content {
+   gap: var(--space-2);
  }
 }
 

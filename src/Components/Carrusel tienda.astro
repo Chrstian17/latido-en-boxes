@@ -2,89 +2,93 @@
 import Card from "../Components/Card.astro";
 ---
 
-<div class="swiper swiper-tienda">
+<div class="swiper swiper--shop">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
 
     <div class="swiper-slide">
       <Card
-        title="Collar Martingale"
+        title="Pegatina para coche"
         description="Disponemos de tres tallas para que puedas seleccionar el collar que mejor se adapte a las características únicas de tu mascota. "
-        price="16'99 €"
-        img="/assets/collar-martingale.webp"
+        price="1'99 €"
+        img="/assets/pegatina-cristal.png"
       />
     </div>
       <div class="swiper-slide">
       <Card
-        title="Collar de piel"
+        title="Bidón de acero inox"
         description="Collar para perro, Galgos, fabricado artesanalmente en piel auténtica, con detalle de Galgos bordado."
-        price="24'90 €"
-        img="/assets/collar-piel.webp"
+        price="19'90 €"
+        img="/assets/botella.png"
       />
     </div>
      <div class="swiper-slide">
       <Card
-        title="Crema para almohadillas"
+        title="Funda de cojín"
         description="Nuestro protector patas perro nutre intensamente las almohadillas secas, agrietadas o irritadas. "
-        price="10'99 €"
-        img="/assets/crema.webp"
+        price="7'99 €"
+        img="/assets/cojin.png"
       />
     </div>
       <div class="swiper-slide">
       <Card
-        title="Collar para Galgos Aalborg"
+        title="Camiseta de tirantes"
         description="El discreto collar de piel de vacuno de alta calidad es ideal debido a su forma especial para todos los galgos."
-        price="21'10 €"
-        img="/assets/collar-aalborg.webp"
+        price="xx'xx €"
+        img="/assets/camiseta.png"
       />
     </div>
       <div class="swiper-slide">
       <Card
-        title="Arnés antiescape"
+        title="Adhesivo de galgos"
         description="Arnés para perros diseñado para el máximo confort, de nailon resistente y robusto, forma ergonómica con suave acolchado, muy cómodo para el animal"
-        price="46'10 €"
-        img="/assets/arnes.webp"
+        price="xx'xx €"
+        img="/assets/pegatina-coche.png"
       />
     </div>
  
           <div class="swiper-slide">
       <Card
-        title="Ultra Squeaker Ball"
+        title="Bandolera chic"
         description="¡Chuckit! Crea juguetes interactivos y atractivos para perros que forjan vínculos duraderos entre las personas y sus mascotas."
-        price="5'49 €"
-        img="/assets/pelota.webp"
+        price="xx'xx €"
+        img="/assets/bolsa.png"
       />
     </div>
  
   </div>
   <div class="swiper-nav">
-    <button class="swiper-arrow button button-light is-prev"
+    <button class="swiper-arrow btn is-prev"
       ><i class="ph-bold ph-caret-left"></i></button
     >
-    <button class="swiper-arrow button button-light is-next"
+    <button class="swiper-arrow btn is-next"
       ><i class="ph-bold ph-caret-right"></i></button
     >
   </div>
 </div>
 
 <style>
-  .swiper-tienda .swiper-arrow {
-    padding: .8em;
+  .swiper--shop .swiper-arrow {
+    padding: var(--space-4);
     border: none;
     display: flex;
     cursor: pointer;
   }
 
-  .swiper-tienda .swiper-nav {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    justify-content: start;
-    padding-bottom: 1rem;
-    i {
-      font-size: 1.75rem;
-    }
+  .swiper--shop .swiper-nav {
+  display: flex;
+flex-direction: row;
+gap: var(--space-2);
+justify-content: start;
+padding-bottom: var(--space-4);
+i {
+
+ color: var(--primary);
+ font-size: 1.5rem;
+ 
+}
+
   }
 
   .swiper {
@@ -92,10 +96,10 @@ import Card from "../Components/Card.astro";
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-6);
   }
 
-  .swiper-tienda .swiper-slide {
+  .swiper--shop .swiper-slide {
     align-content: center;
     width: 100%;
     height: auto;

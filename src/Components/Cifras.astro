@@ -5,37 +5,37 @@ const {description} = Astro.props
 
 
 
-    <div class="col cifra">
+    <div class="stack number">
       
-      <h3 data-counter="12295">12295</h3>
-      <p class="">Perros de caza abandonados en 2022.</p>
+      <h3 data-counter="12295" class="heading-l">12295</h3>
+      <p class="body-m">Perros de caza abandonados en 2022.</p>
     </div>
     
-      <div class="col cifra">
+      <div class="stack number">
       
-      <h3 data-counter="5544">5544</h3>
-      <p class="">Galgos abandonados en 2022.</p>
+      <h3 data-counter="5544" class="heading-l">5544</h3>
+      <p class="body-m">Galgos abandonados en 2022.</p>
     </div>
 
-      <div class="col cifra">
+      <div class="stack number">
       
-      <h3 data-counter="80000">80000</h3>
-      <p class="">Galgos desechados cada año.</p>
+      <h3 data-counter="80000" class="heading-l">80000</h3>
+      <p class="body-m">Galgos desechados cada año.</p>
     </div>
 
-      <div class="col cifra">
+      <div class="stack number">
       
       <div class="percentage">
-        <h3 data-counter="11%"></h3><span>%</span>
+        <h3 data-counter="11%" class="heading-l"></h3><span class="heading-l">%</span>
       </div>
-      <p class="">De los abandonos ocurren tras la temporada de caza.</p>
+      <p class="body-m">De los abandonos ocurren tras la temporada de caza.</p>
     </div>
 
 </div>
 
 <style>
 
-.cifra {
+.number {
 
     display: flex;
     align-items: center;
@@ -54,15 +54,16 @@ const {description} = Astro.props
 p {
 margin-top: 0rem;
   max-width: 30ch;
-  text-align: center;
-  font: var(--body-copy-m);
-  color: var(--light);
+  
+ 
+  color: var(--text-inverse-secondary);
 }
 
-h3 {
-  font: var(--headline-m);
-  color: var(--accent-400);
+.heading-l {
+  
+  color: var(--primary);
   display: flex;
+  font-family: var(--font-body);
 
   
 
@@ -71,7 +72,7 @@ h3 {
 
 @media (max-width: 767px) {
 
-  .cifra {
+  .number {
     gap: 0rem;
   }
   
@@ -82,8 +83,8 @@ h3 {
   flex-direction: row;
 
   span {
-    color: var(--accent-400);
-    font: var(--headline-m);
+    color: var(--primary);
+    
   }
 
 }
@@ -126,5 +127,5 @@ h3 {
     });
   }, { threshold: 0.3 });
 
-  observer.observe(document.querySelector('.cifras-section'));
+  observer.observe(document.querySelector('.numbers'));
 </script>

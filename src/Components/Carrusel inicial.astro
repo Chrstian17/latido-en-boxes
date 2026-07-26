@@ -1,7 +1,7 @@
 
 
 
-          <div class="swiper swiper-inicial ">
+          <div class="swiper swiper--about ">
   <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
     <!-- Slides -->
@@ -19,8 +19,8 @@
    
   </div>
   <div class="swiper-nav">
-    <button class="swiper-arrow button button-accent is-prev"><i class="ph-bold ph-caret-left"></i></button>
-      <button class="swiper-arrow button button-accent is-next"><i class="ph-bold ph-caret-right"></i></button>
+    <button class="swiper-arrow btn btn--primary is-prev"><i class="ph-bold ph-caret-left"></i></button>
+      <button class="swiper-arrow btn btn--primary is-next"><i class="ph-bold ph-caret-right"></i></button>
    
 
   </div>
@@ -32,30 +32,34 @@
 
 <style>
 
-.swiper-inicial .swiper-arrow {
 
-  padding: .8em;
+
+.swiper--about .swiper-arrow {
+
+  padding: var(--space-4);
   border: none;
   display: flex;
   cursor: pointer;
+
+
   
  
 }
 
 
 
-.swiper-inicial .swiper-nav {
+.swiper--about .swiper-nav {
   
 
 display: flex;
 flex-direction: row;
-gap: .5rem;
+gap: var(--space-2);
 justify-content: start;
-padding-bottom: 1rem;
+padding-bottom: var(--space-4);
 i {
 
- 
- font-size: 1.75rem;
+
+ font-size: 1.5rem;
  
 }
 
@@ -67,25 +71,31 @@ i {
 
 display: flex;
 flex-direction: column;
-gap: 1rem;
+gap: var(--space-6);
   
 }
 
-.swiper-inicial .swiper-slide {
+.swiper--about .swiper-slide {
   align-content: center;
   width: 100%;
-  transition: all .2s ease;
+  transition: var(--default-transition);
   
   &:hover {
-    transform: scale(.99);
+    transform: scale(0.97);
+    
 }
 }
 .swiper img {
   width:100%;
-  border-radius: var(--img-corners);
+  border-radius: var(--radius-l);
   aspect-ratio: 4/5;
   object-fit: cover;
-  box-shadow: var(--shadow);
+  transition: var(--default-transition);
+
+  &:hover {
+    box-shadow: var(--shadow-m);
+  }
+  
 }
 
 

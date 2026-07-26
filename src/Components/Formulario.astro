@@ -1,24 +1,35 @@
 <form action="https://api.web3forms.com/submit" method="POST">
          
-            <div class="form-group-container">
-              <div class="form-group">
-                 <input type="hidden" name="access_key" value="0d864027-4774-4698-a66e-aaf65cb99da5">
-              <input type="email" name="email" id="email" required placeholder="Tu dirección de correo electrónico."/>
-              </div>
+            <div class="form-container">
 
-             
-            </div>
-                    <div class="">
-                      <div class="form-group">
-             
-              <textarea name="mensaje" id="mensaje" required placeholder="Escribe aquí tu consulta o mensaje."></textarea>
+              <div class="form-block">
+                <label for=""></label>
+                 <input class="body-m" type="hidden" name="access_key" value="0d864027-4774-4698-a66e-aaf65cb99da5">
+               </div>
+                <div class="form-block">
+                  <label for="email">Tu correo electrónico</label>
+              <input class="body-m" type="email" name="email" id="email" required placeholder="Tu dirección de correo electrónico."/>
+             </div>
+               <div class="form-block">
+             <label for="email">Tu mensaje o consulta</label>
+              <textarea class="body-m" name="mensaje" id="mensaje" required placeholder="Escribe aquí tu consulta o mensaje."></textarea>
             </div>
 
-            <button type="submit" class="button button-accent">
+             <button type="submit" class="btn btn--primary">
               Enviar<i class="ph ph-paper-plane-tilt"></i></button>
+              <div class="terms-checkbox">
+              <input type="checkbox" id="terms" name="terms" value="Terms">
+              <label for="terms" class="body-s">Al enviar este formulario, aceptas nuestra Política de Privacidad.</label>
+              </div>
+             
+            </div>
+                    
+           
+
+           
             
-        </div>
-          <p>Al enviar este formulario, aceptas nuestra Política de Privacidad.</p>
+        
+          
 
           </form>
 
@@ -27,55 +38,63 @@
           <style>
 
 
- 
+ .terms-checkbox {
+
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-2);
+  color: var(--text-inverse-secondary);
+
+ }
  
 
 form {
-  display: grid;
-  gap: 1em;
+  
 
 
 input::placeholder, textarea::placeholder {
-  color: var(--light);
-  opacity: .5;
-  font: var(--body-copy-s);
+  color: var(--text-inverse-muted);
+  opacity: 1;
+  font: var(--body-s);
 }
-p {
-  color: var(--dark-muted-text-2);
-  font: var(--body-copy-s);
+
+
+button {
+  border: none;
 }
 
 }
 
-.form-group {
+.form-block {
   display: flex;
   flex-direction: column;
-  gap: .5em;
+  gap: var(--space-5);
     flex: 1;
 }
 
-.form-group-container {
+.form-container {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-      
+    flex-direction: column;
+    gap:var(--space-6);     
    
   }
 
+label {
+  color: var(--text-inverse);
+}
 
 
 
+.form-block input, textarea {
+  background-color: var(--gray-800);
 
-input {
-  background-color: var(--dark-muted-text);
-
-  border-radius: 24px;
-  color: var(--light);
-  padding: 1em 1em;
+  border-radius: var(--radius-m);
+  color: var(--text-inverse);
+  padding: var(--space-5);
   width: 100%;
-  font: var(--body-copy-m);
-  border: 2px solid var(--dark);
-  transition: border-color .2s ease;
+  
+  border:none;
+  transition: all .2s ease;
   
 
 
@@ -83,30 +102,13 @@ input {
 
 }
 
-label {
-  font: var(--body-copy-s);
-}
 
 textarea {
-  background-color: var(--dark-muted-text);
-  
-  border-radius: 24px;
-  color: var(--light);
-  padding: 1em 1em;
   min-height: 15vh;
-  font: var(--body-copy-m);
-  border: 2px solid var(--dark);
-  transition: all .2s ease;
 }
 
-.col {
-  gap: 4rem;
-  justify-content: center;
-}
 
-img {
-  width: 100%;
-}
+
 .content-wrapper {
   gap: 6rem;
   align-items: end;
@@ -117,9 +119,10 @@ img {
 
 
 
-input:focus, textarea:focus {
+.form-block input:focus, textarea:focus, .form-block input:active, textarea:active, .form-block input:hover, textarea:hover {
   outline: none;
-border: 2px solid var(--dark-muted-text-2);
+border: none;
+background-color: var(--gray-700);
 } 
 
 
