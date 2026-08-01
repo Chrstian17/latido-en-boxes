@@ -7,8 +7,10 @@ const {icon} = Astro.props
 <div class="help-block">
    
     <i class={icon}></i>
+    <div class="help-block__text">
     <h3 class="heading-m">{title}</h3>
-    <p class="body-m">{description}</p>
+    <p class="body-s">{description}</p>
+    </div>
 
 </div>
 
@@ -26,16 +28,17 @@ const {icon} = Astro.props
 
 
 
+
 p {
 margin-top: 0rem;
-  max-width: 30ch;
+  max-width: 25ch;
   text-align: center;
   
   color: var(--text-secondary);
 }
 
 i {
-  font-size: 4rem;
+  font-size: 7rem;
   color: var(--text-default);
 transition: var(--default-transition);
 
@@ -60,6 +63,11 @@ transition: var(--default-transition);
   
 }
 
+.help-block__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
 
 
 </style>

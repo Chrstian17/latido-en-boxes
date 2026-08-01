@@ -19,8 +19,8 @@
    
   </div>
   <div class="swiper-nav">
-    <button class="swiper-arrow btn btn--primary is-prev"><i class="ph-bold ph-caret-left"></i></button>
-      <button class="swiper-arrow btn btn--primary is-next"><i class="ph-bold ph-caret-right"></i></button>
+    <button class="swiper-arrow btn btn--default  is-prev"><i class="ph-bold ph-caret-left"></i></button>
+      <button class="swiper-arrow btn btn--default  is-next"><i class="ph-bold ph-caret-right"></i></button>
    
 
   </div>
@@ -32,12 +32,14 @@
 
 <style>
 
-
+.swiper--about {
+  padding-left: 2rem;
+}
 
 .swiper--about .swiper-arrow {
 
   padding: var(--space-4);
-  border: none;
+  
   display: flex;
   cursor: pointer;
 
@@ -71,7 +73,7 @@ i {
 
 display: flex;
 flex-direction: column;
-gap: var(--space-6);
+gap: var(--space-5);
   
 }
 
@@ -81,19 +83,19 @@ gap: var(--space-6);
   transition: var(--default-transition);
   
   &:hover {
-    transform: scale(0.97);
+    transform:var(--card-scale);
     
 }
 }
 .swiper img {
   width:100%;
   border-radius: var(--radius-l);
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/2;
   object-fit: cover;
   transition: var(--default-transition);
 
   &:hover {
-    box-shadow: var(--shadow-m);
+    box-shadow: var(--shadow-l);
   }
   
 }

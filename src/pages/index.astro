@@ -46,6 +46,11 @@ import Cifras from "../Components/Cifras.astro";
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
+     <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/light/style.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -63,12 +68,10 @@ import Cifras from "../Components/Cifras.astro";
               Una asociación solidaria de apoyo al galgo que une el mundo del
               motor con la protección animal.
             </p>
-            
-              <a href="#como-ayudar" class="btn btn--primary">
-                Quiero ayudar<i class="ph ph-heart"></i></a>
-              
-              
-            
+
+            <a href="#como-ayudar" class="btn cta">
+              Quiero ayudar<i class="ph ph-heart"></i></a
+            >
           </div>
         </div>
       </div>
@@ -76,20 +79,23 @@ import Cifras from "../Components/Cifras.astro";
 
     <!-- ABOUT -->
 
-    <section class="about asimetric-section ">
+    <section class="about asimetric-section">
       <div class="content-wrapper">
         <div class="about__content stack">
           <div class="about__block">
-            <h2 >Nuestra <br> misión</h2>
+            <h2 class="kicker-tag">Misión</h2>
+            <h3 class="heading-m">Más apoyo para quienes más ayudan.</h3>
             <p class="body-m">
-              Es <strong>impulsar, financiar y dar visibilidad</strong> al trabajo
+              <strong>impulsamos, financiamos y damos visibilidad</strong> al trabajo
               de las protectoras de galgos en toda España
             </p>
           </div>
           <div class="about__block">
-            <h2 >Nuestra <br>  filosofía</h2>
+            <h2 class="kicker-tag">Filosofía</h2>
+            <h3 class="heading-m">Juntos llegamos más lejos.</h3>
             <p class="body-m">
-              Transparencia, cercanía y unión con el mundo de la automoción para <strong
+              Creemos en la transparencia, la cercanía y la unión con el mundo
+              de la automoción para <strong
                 >crear comunidad y dar visibilidad.</strong
               >
             </p>
@@ -101,7 +107,7 @@ import Cifras from "../Components/Cifras.astro";
 
     <!-- NUMBERS -->
 
-    <section class="section numbers card-grid" >
+    <section class="section numbers card-grid">
       <div class="section__header numbers__header stack">
         <h2 class="heading-l">Una realidad que no podemos ignorar</h2>
         <p class="body-m">
@@ -110,11 +116,10 @@ import Cifras from "../Components/Cifras.astro";
         </p>
       </div>
 
-      <div class="content-wrapper">
-        <Cifras></Cifras>
+      <div class="content-wrapper numbers__wrapper">
+        <Cifras />
       </div>
     </section>
-
 
     <!-- ACTIONS -->
 
@@ -129,42 +134,86 @@ import Cifras from "../Components/Cifras.astro";
       </div>
 
       <div class="content-wrapper">
-        <div class="stack">
-          <details name="accordion">
-            <summary class="heading-m">Eventos solidarios</summary>
-                <p class="body-m">En primer lugar, organizamos <strong>eventos solidarios vinculados al mundo del motor</strong
-              >, como rutas benéficas, concentraciones con clubs y pilotos y
-              encuentros con talleres o concesionarios, destinando íntegramente
-              las inscripciones y aportaciones a las protectoras colaboradoras.</p>
-          </details>
-          <details name="accordion">
-            <summary class="heading-m">Campañas de concienciación</summary>
-                <p class="body-m">En segundo lugar, desarrollamos <strong
-              >campañas de concienciación y visibilidad</strong
-            > mediante colaboraciones con influencers, figuras del motor y medios,
-            generando contenido que difunde la realidad del galgo y su abandono, además
-            de impartir charlas en colegios, talleres y eventos.</p>
-          </details>
-          <details name="accordion">
-            <summary class="heading-m">Merchandising solidario</summary>
-                <p class="body-m">En tercer lugar, producimos <strong
-              >merchandising solidario</strong
-            > como camisetas, pegatinas y accesorios personalizados, cuyos beneficios
-            permiten financiar necesidades urgentes de las asociaciones.</p>
-          </details>
-          <details name="accordion">
-            <summary class="heading-m">Red de apoyo</summary>
-                <p class="body-m">Finalmente, articulamos una <strong>red de apoyo</strong
-            > que canaliza donaciones económicas y materiales, así como servicios
-            como medicación, pienso, voluntariado, casas de acogida y soporte especializado
-            en comunicación, diseño y promoción. Todo ello se desarrolla con la intención
-            de crear, a medio o largo plazo, un refugio propio que amplíe nuestra
-            capacidad de rescate y cuidado de galgos.</p>
-          </details>
-
+        <div class="accordion stack">
+          <div class="accordion__item is-open">
+            <button class="accordion__trigger heading-m" type="button" data-image="eventos">
+              <span>Eventos solidarios</span>
+              <span class="accordion__icon">
+                <i class="ph ph-plus"></i>
+                <i class="ph ph-minus"></i>
+              </span>
+            </button>
+            <div class="accordion__content">
+              <p class="body-s">
+                En primer lugar, organizamos eventos solidarios vinculados al
+                mundo del motor, como rutas benéficas, concentraciones con clubs
+                y pilotos y encuentros con talleres o concesionarios, destinando
+                íntegramente las inscripciones y aportaciones a las protectoras
+                colaboradoras.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger heading-m" type="button" data-image="campañas">
+              <span>Campañas de concienciación</span>
+              <span class="accordion__icon">
+                <i class="ph ph-plus"></i>
+                <i class="ph ph-minus"></i>
+              </span>
+            </button>
+            <div class="accordion__content">
+              <p class="body-s">
+                En segundo lugar, desarrollamos campañas de concienciación y
+                visibilidad mediante colaboraciones con influencers, figuras del
+                motor y medios, generando contenido que difunde la realidad del
+                galgo y su abandono, además de impartir charlas en colegios,
+                talleres y eventos.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger heading-m" type="button" data-image="merchandising">
+              <span>Merchandising solidario</span>
+              <span class="accordion__icon">
+                <i class="ph ph-plus"></i>
+                <i class="ph ph-minus"></i>
+              </span>
+            </button>
+            <div class="accordion__content">
+              <p class="body-s">
+                En tercer lugar, producimos merchandising solidario como
+                camisetas, pegatinas y accesorios personalizados, cuyos
+                beneficios permiten financiar necesidades urgentes de las
+                asociaciones.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger heading-m" type="button" data-image="apoyo">
+              <span>Red de apoyo</span>
+              <span class="accordion__icon">
+                <i class="ph ph-plus"></i>
+                <i class="ph ph-minus"></i>
+              </span>
+            </button>
+            <div class="accordion__content">
+              <p class="body-s">
+                Finalmente, articulamos una red de apoyo que canaliza donaciones
+                económicas y materiales, así como servicios como medicación,
+                pienso, voluntariado, casas de acogida y soporte especializado
+                en comunicación, diseño y promoción. Todo ello se desarrolla con
+                la intención de crear, a medio o largo plazo, un refugio propio
+                que amplíe nuestra capacidad de rescate y cuidado de galgos.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="stack">
-          <img src="/assets/galgo-taller.webp" alt="" />
+
+        <div class="accordion__images">
+          <img src="/assets/galgo-taller.webp" class="is-active" data-image="eventos" alt="" />
+          <img src="/assets/galgo-taller.webp" data-image="campañas" alt="" />
+          <img src="/assets/galgo-taller.webp" data-image="merchandising" alt="" />
+          <img src="/assets/galgo-taller.webp" data-image="apoyo" alt="" />
         </div>
       </div>
     </section>
@@ -174,14 +223,13 @@ import Cifras from "../Components/Cifras.astro";
     <section class="asimetric-section shop">
       <div class="content-wrapper">
         <div class="shop__header stack">
-          <h2 >Tienda <br>solidaria</h2>
+          <h2>Tienda <br />solidaria</h2>
           <p class="body-m">
             Los beneficios se destinan a apoyar a protectoras de galgos en
             España, financiando rescates, tratamientos y cuidados urgentes.
             <br /><br />Comprar en nuestra tienda es transformar un gesto
             cotidiano en una segunda oportunidad.
           </p>
-          
         </div>
         <Carruseltienda />
       </div>
@@ -189,19 +237,17 @@ import Cifras from "../Components/Cifras.astro";
 
     <!-- ADOPTIONS -->
 
-<section class="section adoptions">
-  <div class="content-wrapper">
-    
-      <CarruselFull></CarruselFull>
-    
-  </div>
-</section>
-
+    <section class="section adoptions">
+      <div class="content-wrapper">
+        <CarruselFull />
+      </div>
+    </section>
 
     <!-- HELP -->
     <section class="section help card-grid" id="como-ayudar">
       <div class="section__header stack">
         <h2>¿Cómo puedo ayudar?</h2>
+        <h3>Hay muchas formas de sumarse al latido.</h3>
       </div>
 
       <div class="content-wrapper">
@@ -209,28 +255,28 @@ import Cifras from "../Components/Cifras.astro";
           <IconoTexto
             title="Económico"
             description="Donaciones o aportaciones periódicas."
-            icon="ph ph-credit-card"
+            icon="ph-fill ph-credit-card"
           />
         </div>
         <div class="stack">
           <IconoTexto
             title="Material"
             description="Pienso, medicación, productos de limpieza, accesorios."
-            icon="ph ph-bone"
+            icon="ph-fill ph-bone"
           />
         </div>
         <div class="stack">
           <IconoTexto
             title="Voluntariado"
             description="Tiempo, transporte, casas de acogida."
-            icon="ph ph-hand-heart"
+            icon="ph-fill ph-hand-heart"
           />
         </div>
         <div class="stack">
           <IconoTexto
             title="Visibilidad"
             description="Ayudar a difundir la causa en redes, prensa y eventos."
-            icon="ph ph-eye"
+            icon="ph-fill ph-eye"
           />
         </div>
       </div>
@@ -239,77 +285,82 @@ import Cifras from "../Components/Cifras.astro";
     <!-- DONATIONS -->
 
     <section class="section donations">
+        <div class="section__header stack">
+        <h2 class="heading-m">Aportaciones económicas</h2>
+        
+      </div>
+
       <div class="content-wrapper">
         <div class="stack donation-card donation-card__teaming">
           <img src="/assets/teaming-logo.png" alt="" class="teaming-logo" />
-            <div class="donation-card__content">
+          <div class="donation-card__content">
             <h3 class="heading-m">Aportación mensual</h3>
             <p class="body-m">
-              Desde 1€ al mes a través de Teaming, da estabilidad continua a las protectoras.
+              Desde 1€ al mes a través de Teaming, da estabilidad continua a las
+              protectoras.
             </p>
             <a
               href="https://www.teaming.net/latidoenboxes"
-              class="btn " target="_blank" rel="noopener noreferrer">
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Súmate al latido<i class="ph ph-heart"></i></a
             >
           </div>
-        
         </div>
         <div class="stack donation-card donation-card__bizum">
           <img src="/assets/bizum-logo.svg" alt="" class="teaming-logo" />
-            <div class="donation-card__content">
-            <h3 class="heading-m">Aportación puntual</h3>
+          <div class="donation-card__content">
+            <h3 class="heading-m">Donación</h3>
             <p class="body-m">
-             Envía tu aportación al instante por Bizum, sin registrarte en ninguna plataforma.
+              Envía tu aportación al instante por Bizum, sin registrarte en
+              ninguna plataforma.
             </p>
-            <a
-              class="btn" target="_blank" id="copiarBizum">
-             <span>Copiar - 612 345 678</span><i class="ph ph-copy"></i></a
+            <a class="btn" target="_blank" id="copiarBizum">
+              <span>Copiar - 612 345 678</span><i class="ph ph-copy"></i></a
             >
           </div>
         </div>
-
-
       </div>
     </section>
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
 
     <footer class="section footer">
-      
-        <div class="content-wrapper">
-          <div class="footer__info stack">
-            <h2 >¡Síguenos para estar al día!</h2>
-            <p class="body-m">
-              Los sorteos y todas las comunicaciones relacionadas se anuncian
-              exclusivamente a través de nuestras redes sociales.
-            </p>
-            <div class="social-link ">
-              <a
-                href="https://www.instagram.com/latidoenboxes/"
-                class="link " target="_blank" rel="noopener noreferrer">
-                <i class="ph ph-instagram-logo link__icon "></i>
-                <span class="body-m">@latidoenboxes</span>
-          </a>
-              
-            </div>
-         
+      <div class="content-wrapper">
+        <div class="footer__info stack">
+          <h2>¡Síguenos para estar al día!</h2>
+          <p class="body-m">
+            Los sorteos y todas las comunicaciones relacionadas se anuncian
+            exclusivamente a través de nuestras redes sociales.
+          </p>
+          <div class="social-link">
+            <a
+              href="https://www.instagram.com/latidoenboxes/"
+              class="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="ph ph-instagram-logo link__icon"></i>
+              <span class="body-m">@latidoenboxes</span>
+            </a>
           </div>
+        </div>
 
-          <div class="footer__contact stack">
-            <h3 class="heading-m">¿Tienes dudas? Contacta con nosotros</h3>
-            <Formulario />
-          </div>
+        <div class="footer__contact stack">
+          <h3 class="heading-m">¿Tienes dudas? Contacta con nosotros</h3>
+          <Formulario />
         </div>
-        <div class="content-wrapper">
-          <nav class="footer__legal">
-            <a href="#" class="link">Aviso legal</a>
-              
-              <a href="#" class="link">Política de cookies</a>
-               <a href="#" class="link">Política de privacidad</a>
-          </nav>
-        </div>
-      
+      </div>
+      <div class="content-wrapper">
+        <nav class="footer__legal">
+          <a href="#" class="link">Aviso legal</a>
+
+          <a href="#" class="link">Política de cookies</a>
+          <a href="#" class="link">Política de privacidad</a>
+        </nav>
+      </div>
     </footer>
 
     <script src="/src/scripts/script.js"></script>
@@ -318,30 +369,52 @@ import Cifras from "../Components/Cifras.astro";
   </body>
 </html>
 
-
 <script>
   const boton = document.getElementById("copiarBizum");
 
-boton.addEventListener("click", async () => {
+  boton.addEventListener("click", async () => {
     const numero = "612 345 678";
 
     try {
-        await navigator.clipboard.writeText(numero);
+      await navigator.clipboard.writeText(numero);
 
-        boton.querySelector("span").textContent = "¡Copiado!";
+      boton.querySelector("span").textContent = "¡Copiado!";
 
-        setTimeout(() => {
-            boton.querySelector("span").textContent = "copiar - 612 345 678";
-        }, 2000);
-
+      setTimeout(() => {
+        boton.querySelector("span").textContent = "copiar - 612 345 678";
+      }, 2000);
     } catch (error) {
-        console.error("No se pudo copiar:", error);
+      console.error("No se pudo copiar:", error);
     }
+  });
+
+const accordionTriggers = document.querySelectorAll(".accordion__trigger");
+const accordionImages = document.querySelectorAll(".accordion__images img");
+
+accordionTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+
+    const item = trigger.closest(".accordion__item");
+    const imageName = trigger.dataset.image;
+
+    // Cerrar los demás
+    document.querySelectorAll(".accordion__item.is-open").forEach((openItem) => {
+      if (openItem !== item) {
+        openItem.classList.remove("is-open");
+      }
+    });
+
+    // Abrir/cerrar el actual
+    item.classList.toggle("is-open");
+
+    // Cambiar imagen
+    accordionImages.forEach((image) => {
+      image.classList.toggle(
+        "is-active",
+        image.dataset.image === imageName
+      );
+    });
+
+  });
 });
-
-
-
-
-
-
 </script>

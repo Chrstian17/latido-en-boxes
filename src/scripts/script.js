@@ -8,7 +8,7 @@ autoHeight: false,
 
    // Todo lo que sea responsive va AQUÍ dentro
   breakpoints: {
-    420: {
+    320: {
       slidesPerView: 1.2, // Un poco de la siguiente foto para invitar a deslizar
     centeredSlides: true,
      spaceBetween: 12,
@@ -42,7 +42,7 @@ const swiperAbout = new Swiper('.swiper.swiper--about', {
 
   // Todo lo que sea responsive va AQUÍ dentro
   breakpoints: {
-    420: {
+    320: {
       slidesPerView: 1.2, 
     centeredSlides: true,
      spaceBetween: 12,
@@ -53,7 +53,7 @@ const swiperAbout = new Swiper('.swiper.swiper--about', {
       spaceBetween: 12,
     },
      1200: {
-      slidesPerView: 2.4,
+      slidesPerView: 1.3,
       spaceBetween: 12,
     },
   },
@@ -77,7 +77,7 @@ const swiperAdoptions = new Swiper('.swiper.swiper--adoptions', {
 
    // Todo lo que sea responsive va AQUÍ dentro
   breakpoints: {
-    420: {
+    320: {
       slidesPerView: 1.2, // Un poco de la siguiente foto para invitar a deslizar
     centeredSlides: true,
      spaceBetween: 12,

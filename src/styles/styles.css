@@ -58,6 +58,13 @@ h2, .heading-l {
   text-wrap: balance;
 }
 
+.heading-s {
+  font: var(--heading-s);
+  letter-spacing: var(--tracking-tighter);
+  text-wrap: balance;
+}
+
+
 .body-l {
   font: var(--body-l);
   letter-spacing: var(--tracking-tighter);
@@ -67,7 +74,7 @@ h2, .heading-l {
 .body-m {
   font: var(--body-m);
   letter-spacing: var(--tracking-tight);
-  text-wrap: balance;
+  text-wrap:inherit;
   
 }
 
@@ -81,12 +88,28 @@ h2, .heading-l {
 
 
 
-
-
-
 /* UTILITIES */
 
 
+.btn--default {
+  color: var(--text-default);
+  background-color: transparent;
+  border: solid 1px var(--border-strong);
+
+  &:hover {
+border: solid 1px var(--text-default);
+}
+}
+
+.btn--inverse {
+  color: var(--text-inverse);
+  background-color: transparent;
+  border: solid 1px var(--red-300);
+
+    &:hover {
+border: solid 1px var(--red-100);
+}
+}
 
 
 
@@ -103,20 +126,31 @@ h2, .heading-l {
   gap: var(--space-2);
   transition: var(--default-transition);
   width: fit-content;
-  color: var(--text-inverse);
+
   
 &:hover {
   transform: var(--move-up) ;
   box-shadow: var(--shadow-m);
+
+  &:active {
+    transform: scale(0.95);
+  }
+  
+  
 }
 
 }
-.btn--primary {
+.cta {
   background-color: var(--primary);
   color: var(--text-inverse);
+  border: none;
+  font-size: 1.4rem;
+  padding: var(--space-5) var(--space-6);
+  
 &:hover {
   background-color: var(--primary-hover);
-  color: var(--text-inverse);
+  
+  box-shadow: var(--shadow-solid);
 }
 
 
@@ -298,6 +332,7 @@ p {
 
 .btn {
   margin-top: var(--space-2);
+  
 }
 }
 
@@ -355,6 +390,43 @@ gap: var(--space-8) ;
 
 }
 
+
+.kicker-tag {
+  font-size: var(--body-s-size);
+  line-height: normal;
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+
+ 
+  font-family: var(--font-body);
+  color: var(--primary);
+}
+
+
+.about h3 {
+  font: var(--heading-lb);
+   font-variation-settings:
+ 
+  "WONK" 0;
+
+  span {
+    color: var(--primary);
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 /* NUMBERS */
 
  .numbers {
@@ -378,6 +450,12 @@ gap: var(--space-8) ;
   }
 }
 
+.numbers__wrapper {
+  background-color: var(--gray-800);
+  padding: var(--space-4);
+  border-radius: var(--radius-l);
+}
+
  
 
 
@@ -385,63 +463,127 @@ gap: var(--space-8) ;
 
 /* ACTIONS */
 
-
-
-.actions img {
-  border-radius: var(--radius-l);
-  aspect-ratio: 3/2;
-  object-fit: cover;
-  
+.actions .accordion {
+gap: 0;
 }
+
 
 .actions .content-wrapper  {
   
-  
+ 
 align-items: center;
 }
 
 
 /* Accordion */
 
-details {
-  border-bottom: 1px solid var(--border-default);
+.accordion.stack {
+  
+  padding: 0;
+  
+}
+
+.accordion__item {
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-block: var(--space-4);
+  background: none;
+  border: 0;
+   cursor: pointer;
+   transition: all .15s ease;
+
   
 }
 
-summary {
-  cursor: pointer;
- 
-  list-style: none; /* quita el triángulo nativo */
-  color: var(--text-default);
-  transition: all .2s ease;
-
-  padding: var(--space-1) 0;
-
-  &:hover {
-transform: translateX(5px);
-color: var(--primary);
-
-  }
+.accordion__trigger:hover {
+  color: var(--text-secondary);
+  transform: translateX(3px);
 }
 
-/* tu propio icono */
-summary::after {
-  content: '+';
-  float: right;
-  color: var(--text-default);
+.accordion__trigger:focus {
+  color: var(--text-secondary);
   
 }
 
-details[open] summary::after {
-  content: '−';
+.accordion__content {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  transition: grid-template-rows 0.15s ease;
 }
 
-details p {
-  margin-top: var(--space-3);
-  
+.accordion__content p {
+  overflow: hidden;
+  margin: 0;
+  padding-bottom: 0;
+
   color: var(--text-secondary);
 }
+
+.accordion__item.is-open .accordion__content {
+  grid-template-rows: 1fr;
+}
+
+.accordion__item.is-open .accordion__content p {
+  padding-bottom: var(--space-4);
+}
+
+
+
+
+
+/* Accordion Icon */
+
+
+.accordion__icon .ph-minus {
+  display: none;
+}
+
+.accordion__item.is-open .accordion__icon .ph-plus {
+  display: none;
+}
+
+.accordion__item.is-open .accordion__icon .ph-minus {
+  display: inline-block;
+}
+
+.accordion__icon i {
+  color: var(--text-secondary);
+  font-size: .8em;
+}
+
+/* Accordion Images */
+
+.accordion__images {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.accordion__images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+border-radius: var(--radius-l);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.accordion__images img.is-active {
+  opacity: 1;
+}
+
+
+
+
+
 
 
 
@@ -468,7 +610,7 @@ background: linear-gradient(180deg,var(--primary) 40%, var(--red-700) 100%);
   }
   p {
     color: var(--text-inverse);
-    
+  
     opacity: .8;
   }
 }
@@ -476,9 +618,9 @@ background: linear-gradient(180deg,var(--primary) 40%, var(--red-700) 100%);
 /* ADOPTIONS */
 
 .adoptions {
- background-color: var(--gray-300);
+ background-color: var(--gray-200);
 padding: var(--padding-block) 0;
-padding-bottom: 0;
+
 
 
   .content-wrapper {
@@ -491,7 +633,7 @@ width: 100%;
 @media (max-width: 767px) {
 
  .adoptions {
-  padding-top: var(--space-8);
+  
  }
   
 }
@@ -519,14 +661,17 @@ width: 100%;
 
 
 
-
+.help .content-wrapper{
+  padding-top: var(--space-1);
+  max-width: clamp(750px, 85%, 1200px);
+}
 
 /* DONATIONS*/
 
 .donation-card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-7);
   padding: var(--space-6);
   border-radius: var(--radius-l);
   transition: box-shadow .2s ease;
@@ -548,12 +693,19 @@ width: 100%;
 .donation-card__content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-2);
 }
 
 .donation-card .btn {
-  min-width: 100%;
+ 
   justify-content: center;
+  color: var(--text-inverse);
+  font-size: 1.4rem;
+  padding: var(--space-5) var(--space-6);
+  margin-top: var(--space-5);
+  &:hover {
+    box-shadow: var(--shadow-solid);
+  }
 }
 
 .donation-card__teaming {
@@ -591,7 +743,15 @@ width: 100%;
 
 .donations {
   padding-inline: 1rem;
-  padding-top: 0;
+  padding-top: var(--space-7);
+}
+
+.donations h2 {
+  font: var(--heading-lb);
+}
+
+.donations .section__header {
+  padding-bottom: var(--space-9);
 }
 
 

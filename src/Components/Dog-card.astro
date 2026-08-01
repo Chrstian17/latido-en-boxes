@@ -2,91 +2,90 @@
 const {name, age, location, img} = Astro.props
 ---
 
-<div class="card-container">
-    <div class="card__image">
+<article class="adoption-card">
+    <div class="adoption-card__image">
         <img src={img} alt="">
         
     </div>
-    <div class="card__content">
+    <div class="adoption-card__content">
         
         <h3 class="name heading-m">{name}</h3>
-        <div class="age">
-            <i class="ph-bold ph-cake"></i><p class="body-m">{age}</p>
+        <div class="adoption-card__meta">
+           <span class="body-s"><i class="ph-bold ph-cake"></i>{age}</span>
+           <span class="body-s"><i class="ph-bold ph-house-line"></i>{location}</span>
         </div>
-        <div class="location">
-        <i class="ph-bold ph-house-line"></i><p class="body-m">{location}</p>
-        </div>
-        
-     
-       
     
-</div>
+    </div>
+
+</article>
 
 <style>
-.card-container {
-    background-color: var(--gray-100);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-    overflow: hidden;
-    border-radius: var(--radius-l);
+
+.adoption-card {
     transition: all .2s ease;
-    
-    height: 100%;
-&:hover {
-    transform: scale(.98);
-    box-shadow: var(--shadow-s);
-}
-}
+    overflow: hidden;
+     border-radius: var(--radius-l);
 
-.card__content {
+    &:hover {
+        transform: var(--card-scale);
+        box-shadow: var(--shadow-m);
+    }
+}    
 
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-0);
-    padding: 0 2rem 1.4rem 1.4rem;
-   flex-grow: 1;
-    
-    
-h3 {
-    
-    margin-bottom: var(--space-2);
-    
+.adoption-card__image {
+  position: relative;
+ 
 }
 
-.age, .location {
-    
-    color: var(--text-secondary);
+.adoption-card__image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  
+}
+
+.adoption-card__content {
+  position: absolute;
+  left: var(--space-3);
+  right: var(--space-3);
+  bottom: var(--space-3);
+display: flex;
+flex-direction: column;
+gap: var(--space-3);
+  padding: var(--space-4);
+  padding-right: var(--space-5);
+  background: var(--gray-100);
+  border-radius: var(--radius-m);
+  width: fit-content;
+
+}
+
+.adoption-card__meta {
     display: flex;
     flex-direction: row;
-    gap: var(--space-2);
-    align-items: center;
+    gap: var(--space-5);
 
     i {
-        color: var(--text-secondary);
-        
+        font-size: 1.2em;
+         color: var(--text-secondary);
     }
-    
-} 
-
 }
 
+.name {
 
-.card__image {
+    line-height: var(--leading-tighter);
+}
+
+.adoption-card__meta span {
     display: flex;
-    flex-direction: column;
-    gap: .2rem;
-
-     img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-   
-    margin-bottom: 1rem;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-1);
+    color: var(--text-secondary);
 }
-}
-
 
 
 
 </style>
+

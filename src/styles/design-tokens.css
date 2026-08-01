@@ -98,8 +98,9 @@
 
 /* Shadows */
 --shadow-s: 0 2px 8px rgba(0,0,0,.06);
---shadow-m: 8px 8px 8px rgba(0,0,0,.09);
+--shadow-m: 4px 4px 8px rgba(0,0,0,.09);
 --shadow-l: 0 12px 32px rgba(0,0,0,.14);
+--shadow-solid: 4px 6px 0px rgba(0,0,0,.60);
 
 /* ==========================================================
    Typography
@@ -114,29 +115,30 @@
 --button-text: 600 1.2rem / 1.4 var(--font-primary);
 
 
---display-size: clamp(5rem, 6.091rem + 1vw, 9rem); 
+--display-size: clamp(6rem, 5.2rem + 4vw, 10rem);
 --heading-l-size: clamp(2.5rem, 1vw + 3rem, 5rem);
 --heading-m-size: 1.75rem;
---heading-s-size: 1.4rem;
+--heading-s-size: 1.6rem;
 --body-l-size:  1.5rem;
 --body-m-size:  1.1rem;
 --body-s-size:  .9rem;
 
 --button-text: var(--weight-medium) var(--body-m-size)/var(--leading-none) var(--font-body);
 
---weight-bold: 700;
+--weight-bold: 550;
 --weight-medium: 500;
 --weight-regular: 400;
 
 
---display: 800 clamp(5rem, 6.091rem + 1vw, 9rem)/var(--leading-none) var(--font-heading); 
+--display: 800 var(--display-size)/ var(--leading-none) var(--font-heading); 
 --heading-l: 700 clamp(2.5rem, 1vw + 3rem, 5rem)/var(--leading-tightest) var(--font-heading) ;
 --heading-m: var(--weight-bold) 1.75rem/var(--leading-normal) var(--font-body);
---heading-s: var(--weight-medium) 1.4rem/var(--leading-normal) var(--font-body);
---body-l: var(--weight-medium)  1.5rem/var(--leading-normal) var(--font-body);
+--heading-s: var(--weight-bold) 1.5rem/var(--leading-normal) var(--font-body);
+--body-l: var(--weight-medium)  1.35rem/var(--leading-normal) var(--font-body);
 --body-m: var(--weight-regular)  1.1rem/var(--leading-normal) var(--font-body);
 --body-s: var(--weight-regular)  .9rem/var(--leading-normal) var(--font-body);
 
+--heading-lb: 500 clamp(2.5rem, 2.4rem + 0.5vw, 3rem) /var(--leading-tightest) var(--font-heading) ;
 
 
 
@@ -163,7 +165,8 @@
 
 --radius-s: .75rem;
 --radius-m: 1.5rem;
---radius-l: 2.5rem;
+--radius-l: 2.25rem;
+--radius-xl: 3rem;
 --radius-pill: 999px;
 
 /* ==========================================================
@@ -185,7 +188,7 @@
 --section-spacing: clamp(4rem, 6vw, 10rem);
 --content-spacing: clamp(4rem, 5vw, 6rem);
 
---padding-block: clamp(2rem, 4vw + 1.2rem, 6rem);
+--padding-block: clamp(2.5rem, 2rem + 4vw, 10rem);
 --padding-inline: clamp(1rem, 1vw + .8rem, 2rem);
 
 /* ==========================================================
@@ -206,7 +209,8 @@
    ========================================================== */
 
 --default-transition: all .2s ease;
---move-up: translateY(-3px);
+--move-up: translateY(-1px);
+--card-scale: scale(0.995);
 
 }
 

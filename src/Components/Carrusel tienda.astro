@@ -59,10 +59,10 @@ import Card from "../Components/Card.astro";
  
   </div>
   <div class="swiper-nav">
-    <button class="swiper-arrow btn is-prev"
+    <button class="swiper-arrow btn btn--inverse is-prev"
       ><i class="ph-bold ph-caret-left"></i></button
     >
-    <button class="swiper-arrow btn is-next"
+    <button class="swiper-arrow btn btn--inverse is-next"
       ><i class="ph-bold ph-caret-right"></i></button
     >
   </div>
@@ -71,7 +71,7 @@ import Card from "../Components/Card.astro";
 <style>
   .swiper--shop .swiper-arrow {
     padding: var(--space-4);
-    border: none;
+  
     display: flex;
     cursor: pointer;
   }
@@ -84,7 +84,7 @@ justify-content: start;
 padding-bottom: var(--space-4);
 i {
 
- color: var(--primary);
+ 
  font-size: 1.5rem;
  
 }
@@ -103,9 +103,12 @@ i {
     align-content: center;
     width: 100%;
     height: auto;
+
+   
   }
   .swiper img {
     width: 100%;
+    
   }
 
 

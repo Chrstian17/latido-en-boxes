@@ -10,7 +10,7 @@ const {title, description, price, img} = Astro.props
     <div class="card__content">
         <div class="card__info">
         <h3 class="name heading-m">{title}</h3>
-        <p class="description body-m">{description}</p>
+        <p class="description body-s">{description}</p>
         </div>
      
        <p class="price body-l">{price}</p>
@@ -22,10 +22,11 @@ const {title, description, price, img} = Astro.props
     background-color: var(--gray-100);
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-2);
     overflow: hidden;
     border-radius: var(--radius-l);
     transition: all .15s ease;
+     
     
     height: 100%;
 &:hover {
@@ -39,7 +40,8 @@ const {title, description, price, img} = Astro.props
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
-    padding: 0 var(--space-3) var(--space-5) var(--space-5);
+   padding: var(--space-5);
+   padding-top: 0;
    flex-grow: 1;
 
 
@@ -63,6 +65,7 @@ const {title, description, price, img} = Astro.props
     flex-direction: column;
     gap: var(--space-2);
     flex-grow: 1;
+    
 
 }
 
@@ -73,13 +76,15 @@ const {title, description, price, img} = Astro.props
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
+    padding: var(--space-3);
 
      img {
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
+    border-radius: var(--radius-m);
    
-    margin-bottom: var(--space-3);
+    
 }
 }
 

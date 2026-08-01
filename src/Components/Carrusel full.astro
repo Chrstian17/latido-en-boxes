@@ -70,8 +70,8 @@ import Dogcard from "../Components/Dog-card.astro";
 </div>
 
   <div class="swiper-nav">
-    <button class="swiper-arrow btn btn--primary is-prev"><i class="ph-bold ph-caret-left"></i></button>
-      <button class="swiper-arrow btn btn--primary is-next"><i class="ph-bold ph-caret-right"></i></button>
+    <button class="swiper-arrow btn btn--default is-prev"><i class="ph-bold ph-caret-left"></i></button>
+      <button class="swiper-arrow btn btn--default is-next"><i class="ph-bold ph-caret-right"></i></button>
    
 
   </div>
@@ -85,7 +85,7 @@ import Dogcard from "../Components/Dog-card.astro";
 .swiper-outer .swiper-arrow {
 
  padding: var(--space-4);
-  border: none;
+  
   display: flex;
   cursor: pointer;
 
@@ -102,13 +102,13 @@ display: flex;
 flex-direction: row;
 position: absolute;
 z-index: 10;
-top: 45%; 
+top: 50%; 
     transform: translateY(-50%);
    
     justify-content: space-between;
-    width: calc(100% + 80px); /* sobresale 20px a cada lado */
+    width: calc(100% + 190px); /* sobresale 20px a cada lado */
     
-    left: -40px; /* desplaza para cubrir el padding */
+    left: -95px; /* desplaza para cubrir el padding */
     
 
 
@@ -127,13 +127,7 @@ i {
 
 
 
-.swiper--adoptions {
-  position: relative;
-  padding-bottom: 5rem;
-  
-  
-  
-}
+
 
 .swiper {
  width: 100%;
