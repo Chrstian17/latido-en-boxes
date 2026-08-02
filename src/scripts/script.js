@@ -53,7 +53,7 @@ const swiperAbout = new Swiper('.swiper.swiper--about', {
       spaceBetween: 12,
     },
      1200: {
-      slidesPerView: 1.3,
+      slidesPerView: 1.2,
       spaceBetween: 12,
     },
   },
