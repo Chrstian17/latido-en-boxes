@@ -563,6 +563,7 @@ align-items: center;
    cursor: pointer;
    transition: all .15s ease;
    text-align: left;
+  color: var(--text-default);
 
   
 }
@@ -733,7 +734,7 @@ width: 100%;
   .content-wrapper {
    max-width: var(--content-width);
    display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
   margin: auto;
   column-gap: var(--space-6);
   row-gap: var(--space-4);

@@ -115,7 +115,7 @@
 --button-text: 600 1.2rem / 1.4 var(--font-primary);
 
 
---display-size: clamp(6rem, 5.2rem + 4vw, 10rem);
+--display-size: clamp(4.5rem, 3.4rem + 5.5vw, 10rem);
 --heading-l-size: clamp(2.5rem, 1vw + 3rem, 5rem);
 --heading-m-size: 1.75rem;
 --heading-s-size: 1.6rem;
