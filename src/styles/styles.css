@@ -684,6 +684,8 @@ background: linear-gradient(180deg,var(--primary) 40%, var(--red-700) 100%);
   }
 }
 
+
+
 .shop__header {
   
 
@@ -696,6 +698,18 @@ background: linear-gradient(180deg,var(--primary) 40%, var(--red-700) 100%);
     opacity: .8;
   }
 }
+
+
+
+
+@media (max-width: 767px) {
+
+ .asimetric-section.shop {
+  padding-block: var(--space-4);
+ }
+  
+}
+
 
 /* ADOPTIONS */
 
@@ -760,9 +774,16 @@ width: 100%;
 
 }
 
+#como-ayudar .content-wrapper .stack {
+
+  padding-inline: 0;
+}
+
 
 
 /* DONATIONS*/
+
+
 
 .donation-card {
   display: flex;
@@ -849,6 +870,24 @@ width: 100%;
 .donations .section__header {
   padding-bottom: var(--space-8);
 }
+
+
+@media (max-width: 767px) {
+
+ .donations {
+
+  padding-top: var(--space-3);
+  
+ }
+
+ .donations .section__header {
+  padding-bottom: var(--space-6);
+ }
+
+ 
+  
+}
+
 
 
 /* FOOTER */
